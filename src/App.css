@@ -497,7 +497,7 @@ footer {
 
   nav {
     position: absolute;
-    top: 80px;
+    top: 100%;
     left: 0;
     right: 0;
     background-color: white;
@@ -506,6 +506,7 @@ footer {
     clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
     transition: var(--transition);
     justify-content: flex-start;
+    z-index: 999;
   }
 
   nav.open {
