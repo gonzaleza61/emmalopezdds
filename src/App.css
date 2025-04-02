@@ -70,14 +70,16 @@ section {
 }
 
 .secondary-button {
-  background-color: transparent;
-  color: var(--primary-color);
-  border: 2px solid var(--primary-color);
+  background-color: rgba(255, 255, 255, 0.15);
+  color: var(--light-text);
+  border: 2px solid var(--light-text);
+  font-weight: 600;
 }
 
 .secondary-button:hover {
-  background-color: rgba(74, 144, 226, 0.1);
+  background-color: rgba(255, 255, 255, 0.25);
   transform: translateY(-2px);
+  color: var(--light-text);
 }
 
 .cta-button {
@@ -197,8 +199,7 @@ nav ul li a:not(.cta-button):hover:after {
 /* Hero Section */
 .hero {
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url("https://placehold.co/1200x600/4a90e2/ffffff?text=Dental+Care")
-      no-repeat center center/cover;
+    url("/landscapehero-min.jpg") no-repeat center center/cover;
   height: 80vh;
   display: flex;
   align-items: center;
@@ -389,6 +390,15 @@ nav ul li a:not(.cta-button):hover:after {
   resize: vertical;
 }
 
+/* Map Container */
+.map-container {
+  grid-column: 1 / -1;
+  margin-top: 40px;
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  box-shadow: var(--box-shadow);
+}
+
 /* Footer */
 footer {
   background-color: var(--dark-bg);
@@ -531,4 +541,18 @@ footer {
   .contact {
     grid-template-columns: 1fr;
   }
+
+  .map-container {
+    height: 300px;
+  }
+
+  .map-container iframe {
+    height: 100%;
+  }
+}
+
+/* Ensure the hero section buttons are properly visible */
+.hero .secondary-button {
+  color: white;
+  border-color: white;
 }
