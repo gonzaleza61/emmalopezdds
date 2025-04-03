@@ -618,12 +618,21 @@ footer {
 
   .logo-container {
     flex: 1;
-    padding: 10px 0; /* Increased padding */
+    padding: 10px 0 10px 10px; /* Added left padding */
   }
 
   .logo-container h1 {
     font-size: 1.8rem;
     margin-top: 10px; /* Add top margin */
+  }
+
+  /* Reduce hero text size on tablets */
+  .hero h2 {
+    font-size: 2.8rem;
+  }
+
+  .hero p {
+    font-size: 1.1rem;
   }
 
   .mobile-menu-button {
@@ -632,28 +641,23 @@ footer {
     padding: 10px 15px; /* Increased padding */
   }
 
-  /* Ensure the menu button is visible */
-  .mobile-menu-button span {
-    width: 25px;
-    height: 3px;
-    background-color: var(--light-text);
-    margin: 3px 0;
-    transition: var(--transition);
-    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3); /* Add shadow for visibility */
-  }
-
+  /* Hide desktop navigation and show mobile menu */
   nav {
     position: absolute;
     top: 100%;
     left: 0;
     right: 0;
-    background-color: white;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.95); /* Semi-transparent white */
+    backdrop-filter: blur(10px); /* Add blur effect for modern look */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    padding: 10px 20px 20px;
     clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
     transition: var(--transition);
     justify-content: flex-start;
     z-index: 999;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    border: 1px solid rgba(236, 60, 90, 0.1); /* Subtle border matching secondary color */
   }
 
   nav.open {
@@ -668,14 +672,30 @@ footer {
   }
 
   nav ul li {
-    margin: 10px 0;
+    margin: 0;
     width: 100%;
     text-align: center;
+    border-bottom: 1px solid rgba(236, 60, 90, 0.1); /* Subtle border between items */
+    padding: 12px 0;
   }
 
   nav ul li:last-child {
     margin-top: 15px;
     margin-left: 0;
+    border-bottom: none; /* Remove border from last item */
+    padding-bottom: 5px;
+  }
+
+  nav ul li a:not(.cta-button) {
+    color: var(--text-color);
+    text-shadow: none;
+    font-weight: 500;
+    display: block;
+    padding: 8px 0;
+  }
+
+  nav ul li a:not(.cta-button):hover {
+    color: var(--secondary-color);
   }
 
   nav ul li a.cta-button {
@@ -697,7 +717,12 @@ footer {
     padding: 35px 20px 20px; /* Even more top padding on mobile */
   }
 
+  .logo-container {
+    padding: 10px 0 10px 15px; /* More left padding on mobile */
+  }
+
   .logo-container h1 {
+    font-size: 1.6rem; /* Smaller font on mobile */
     margin-top: 15px; /* More top margin on mobile */
   }
 
@@ -705,13 +730,20 @@ footer {
     margin-top: 20px; /* More top margin on mobile */
   }
 
-  .hero {
-    padding-top: 140px; /* Increase top padding in hero for mobile */
+  /* Further reduce hero text size on mobile */
+  .hero h2 {
+    font-size: 2.2rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
   }
 
   .hero {
     padding-left: 30px;
+    padding-right: 30px; /* Add right padding for better text wrapping */
     justify-content: center;
+    padding-top: 140px; /* Increase top padding in hero for mobile */
   }
 
   .hero-content {
