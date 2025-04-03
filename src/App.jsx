@@ -48,22 +48,45 @@ function App() {
       <div className="hero-container">
         <section id="home" className="hero">
           <div className="hero-content">
-            <h2>Your Perfect Smile Begins Here</h2>
+            <h2>Your Smile, Our Passion</h2>
             <p>
-              Providing exceptional dental care for the whole family in a
-              comfortable environment.
+              Experience exceptional dental care with Dr. Emma Lopez. We're
+              committed to providing comfortable, state-of-the-art dentistry for
+              your entire family.
             </p>
             <div className="hero-buttons">
               <a href="#contact" className="primary-button">
                 Book Appointment
               </a>
-              <a href="#services" className="secondary-button">
-                Our Services
-              </a>
             </div>
           </div>
         </section>
       </div>
+
+      {/* New About Us Section */}
+      <section className="intro-about">
+        <div className="intro-about-content">
+          <h2>Welcome to Emma Lopez DDS</h2>
+          <p>
+            At our practice, we believe that a healthy smile is essential to
+            your overall wellbeing. Dr. Emma Lopez and our dedicated team
+            provide personalized dental care in a comfortable, modern
+            environment using the latest technology and techniques.
+          </p>
+          <p>
+            Whether you're visiting for a routine cleaning or a complete smile
+            makeover, we're committed to making your experience positive and
+            stress-free. Our gentle approach and attention to detail ensure that
+            you receive the highest quality care at every visit.
+          </p>
+          <a href="#about" className="about-link">
+            Learn more about us
+          </a>
+        </div>
+        <div className="intro-about-image">
+          <img src="/landscapeabout.jpg" alt="Our dental practice" />
+        </div>
+      </section>
 
       {/* Services Section */}
       <section id="services" className="services">
