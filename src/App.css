@@ -5,7 +5,7 @@
   --accent-color: #f0ad4e;
   --text-color: #333;
   --light-text: #fff;
-  --light-bg: #f9f9f9;
+  --light-bg: #ffffff;
   --dark-bg: #2c3e50;
   --border-radius: 8px;
   --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -26,11 +26,13 @@ body {
   font-family: "Roboto", sans-serif;
   line-height: 1.6;
   color: var(--text-color);
+  background-color: white;
 }
 
 .dental-website {
   max-width: 100%;
   overflow-x: hidden;
+  background-color: white;
 }
 
 section {
@@ -84,8 +86,12 @@ section {
 
 .cta-button {
   background-color: var(--secondary-color);
-  color: var(--light-text);
+  color: var(--light-text) !important;
   border: none;
+  padding: 10px 20px;
+  border-radius: var(--border-radius);
+  transition: var(--transition);
+  font-weight: 600;
 }
 
 .cta-button:hover {
@@ -100,10 +106,11 @@ header {
   align-items: center;
   padding: 20px 40px;
   background-color: white;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   position: sticky;
   top: 0;
   z-index: 1000;
+  box-shadow: none;
+  border-bottom: none;
 }
 
 .logo-container {
@@ -196,7 +203,14 @@ nav ul li a:not(.cta-button):hover:after {
   transition: var(--transition);
 }
 
-/* Hero Section */
+/* Hero container with proper spacing */
+.hero-container {
+  background-color: white;
+  padding: 0 20px;
+  margin-top: 0;
+}
+
+/* Hero section with rounded corners */
 .hero {
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
     url("/landscapehero-min.jpg") no-repeat center center/cover;
@@ -206,6 +220,37 @@ nav ul li a:not(.cta-button):hover:after {
   justify-content: center;
   text-align: center;
   color: var(--light-text);
+  border-radius: 30px; /* Add rounded corners all around */
+  overflow: hidden;
+  position: relative;
+  margin: 0 auto;
+  max-width: 1800px;
+}
+
+/* Update the shadow for all rounded corners */
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 20px;
+  box-shadow: inset 0 10px 10px -10px rgba(0, 0, 0, 0.3);
+  border-radius: 30px 30px 0 0; /* Keep the shadow only at the top */
+  z-index: 1;
+}
+
+/* Add a shadow for the bottom */
+.hero::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 20px;
+  box-shadow: inset 0 -10px 10px -10px rgba(0, 0, 0, 0.3);
+  border-radius: 0 0 30px 30px;
+  z-index: 1;
 }
 
 .hero-content {
@@ -231,7 +276,9 @@ nav ul li a:not(.cta-button):hover:after {
 
 /* Services Section */
 .services {
-  background-color: var(--light-bg);
+  background-color: white;
+  margin-top: 0;
+  padding-top: 60px;
 }
 
 .services-grid {
@@ -263,6 +310,66 @@ nav ul li a:not(.cta-button):hover:after {
 .service-card h3 {
   margin-bottom: 15px;
   color: var(--primary-color);
+}
+
+/* Crown service card with custom background */
+.crown-service {
+  background: linear-gradient(
+      rgba(255, 255, 255, 0.9),
+      rgba(255, 255, 255, 0.9)
+    ),
+    url("/crownabstract.png") no-repeat center center;
+  background-size: contain;
+  border: 1px solid rgba(74, 144, 226, 0.2);
+}
+
+.crown-service:hover {
+  background: linear-gradient(
+      rgba(255, 255, 255, 0.8),
+      rgba(255, 255, 255, 0.8)
+    ),
+    url("/crownabstract.png") no-repeat center center;
+  background-size: contain;
+}
+
+/* Cosmetic service card with custom background */
+.cosmetic-service {
+  background: linear-gradient(
+      rgba(255, 255, 255, 0.9),
+      rgba(255, 255, 255, 0.9)
+    ),
+    url("/cosmeticdentistry.png") no-repeat center center;
+  background-size: contain;
+  border: 1px solid rgba(74, 144, 226, 0.2);
+}
+
+.cosmetic-service:hover {
+  background: linear-gradient(
+      rgba(255, 255, 255, 0.8),
+      rgba(255, 255, 255, 0.8)
+    ),
+    url("/cosmeticdentistry.png") no-repeat center center;
+  background-size: contain;
+}
+
+/* General dentistry service card with custom background */
+.general-service {
+  background: linear-gradient(
+      rgba(255, 255, 255, 0.9),
+      rgba(255, 255, 255, 0.9)
+    ),
+    url("/gendentistry.png") no-repeat center center;
+  background-size: contain;
+  border: 1px solid rgba(74, 144, 226, 0.2);
+}
+
+.general-service:hover {
+  background: linear-gradient(
+      rgba(255, 255, 255, 0.8),
+      rgba(255, 255, 255, 0.8)
+    ),
+    url("/gendentistry.png") no-repeat center center;
+  background-size: contain;
 }
 
 /* About Section */
@@ -311,7 +418,7 @@ nav ul li a:not(.cta-button):hover:after {
 
 /* Testimonials Section */
 .testimonials {
-  background-color: var(--light-bg);
+  background-color: white;
 }
 
 .testimonial-grid {
@@ -359,7 +466,7 @@ nav ul li a:not(.cta-button):hover:after {
 }
 
 .contact-form {
-  background-color: var(--light-bg);
+  background-color: #f8f9fa;
   padding: 30px;
   border-radius: var(--border-radius);
   box-shadow: var(--box-shadow);
@@ -516,10 +623,27 @@ footer {
   nav ul {
     flex-direction: column;
     width: 100%;
+    align-items: center;
+    text-align: center;
   }
 
   nav ul li {
     margin: 10px 0;
+    width: 100%;
+    text-align: center;
+  }
+
+  nav ul li:last-child {
+    margin-top: 15px;
+    margin-left: 0;
+  }
+
+  nav ul li a.cta-button {
+    display: inline-block;
+    width: 80%;
+    max-width: 250px;
+    padding: 12px 20px;
+    margin: 0 auto;
   }
 
   nav ul li a:after {

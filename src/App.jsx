@@ -45,29 +45,31 @@ function App() {
       </header>
 
       {/* Hero Section */}
-      <section id="home" className="hero">
-        <div className="hero-content">
-          <h2>Your Perfect Smile Begins Here</h2>
-          <p>
-            Providing exceptional dental care for the whole family in a
-            comfortable environment.
-          </p>
-          <div className="hero-buttons">
-            <a href="#contact" className="primary-button">
-              Book Appointment
-            </a>
-            <a href="#services" className="secondary-button">
-              Our Services
-            </a>
+      <div className="hero-container">
+        <section id="home" className="hero">
+          <div className="hero-content">
+            <h2>Your Perfect Smile Begins Here</h2>
+            <p>
+              Providing exceptional dental care for the whole family in a
+              comfortable environment.
+            </p>
+            <div className="hero-buttons">
+              <a href="#contact" className="primary-button">
+                Book Appointment
+              </a>
+              <a href="#services" className="secondary-button">
+                Our Services
+              </a>
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
+      </div>
 
       {/* Services Section */}
       <section id="services" className="services">
         <h2 className="section-title">Our Services</h2>
         <div className="services-grid">
-          <div className="service-card">
+          <div className="service-card general-service">
             <div className="service-icon">🦷</div>
             <h3>General Dentistry</h3>
             <p>
@@ -75,7 +77,7 @@ function App() {
               ages.
             </p>
           </div>
-          <div className="service-card">
+          <div className="service-card cosmetic-service">
             <div className="service-icon">✨</div>
             <h3>Cosmetic Dentistry</h3>
             <p>
@@ -83,12 +85,12 @@ function App() {
               smile.
             </p>
           </div>
-          <div className="service-card">
+          <div className="service-card crown-service">
             <div className="service-icon">👑</div>
-            <h3>Restorative Care</h3>
+            <h3>Crown Placement</h3>
             <p>
-              Fillings, crowns, bridges, and implants to restore your dental
-              health.
+              Restore damaged teeth with custom-made crowns for strength and
+              aesthetics.
             </p>
           </div>
           <div className="service-card">
