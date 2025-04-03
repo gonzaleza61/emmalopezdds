@@ -295,15 +295,102 @@ nav ul li a:not(.cta-button):hover:after {
   padding-bottom: 80px;
 }
 
-/* Service cards with improved styling */
+/* Service cards with improved styling and more visible backgrounds */
 .service-card {
   background-color: white;
-  padding: 30px;
+  padding: 40px 30px; /* Increased top/bottom padding to compensate for removed emoji */
   border-radius: var(--border-radius);
   box-shadow: var(--box-shadow);
   text-align: center;
   transition: var(--transition);
   border: 1px solid rgba(0, 0, 0, 0.05);
+  position: relative;
+  min-height: 220px; /* Ensure consistent height */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Hide service icons (emojis) */
+.service-icon {
+  display: none;
+}
+
+/* Crown service card with much more visible background */
+.crown-service {
+  background: linear-gradient(
+      rgba(255, 255, 255, 0.5),
+      rgba(255, 255, 255, 0.5)
+    ),
+    url("/crownabstract.png") no-repeat center center;
+  background-size: contain;
+  border: 1px solid rgba(74, 144, 226, 0.2);
+}
+
+.crown-service:hover {
+  background: linear-gradient(
+      rgba(255, 255, 255, 0.4),
+      rgba(255, 255, 255, 0.4)
+    ),
+    url("/crownabstract.png") no-repeat center center;
+  background-size: contain;
+}
+
+/* Cosmetic service card with much more visible background */
+.cosmetic-service {
+  background: linear-gradient(
+      rgba(255, 255, 255, 0.5),
+      rgba(255, 255, 255, 0.5)
+    ),
+    url("/cosmeticdentistry.png") no-repeat center center;
+  background-size: contain;
+  border: 1px solid rgba(74, 144, 226, 0.2);
+}
+
+.cosmetic-service:hover {
+  background: linear-gradient(
+      rgba(255, 255, 255, 0.4),
+      rgba(255, 255, 255, 0.4)
+    ),
+    url("/cosmeticdentistry.png") no-repeat center center;
+  background-size: contain;
+}
+
+/* General dentistry service card with much more visible background */
+.general-service {
+  background: linear-gradient(
+      rgba(255, 255, 255, 0.5),
+      rgba(255, 255, 255, 0.5)
+    ),
+    url("/gendentistry.png") no-repeat center center;
+  background-size: contain;
+  border: 1px solid rgba(74, 144, 226, 0.2);
+}
+
+.general-service:hover {
+  background: linear-gradient(
+      rgba(255, 255, 255, 0.4),
+      rgba(255, 255, 255, 0.4)
+    ),
+    url("/gendentistry.png") no-repeat center center;
+  background-size: contain;
+}
+
+/* Improve service card text visibility with stronger contrast */
+.service-card h3 {
+  margin-bottom: 15px;
+  color: var(--primary-color);
+  position: relative;
+  z-index: 2;
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.8);
+  font-weight: 700;
+}
+
+.service-card p {
+  position: relative;
+  z-index: 2;
+  text-shadow: 0 0 4px rgba(255, 255, 255, 0.8);
+  font-weight: 500;
 }
 
 /* Update the services grid for better spacing */
@@ -318,76 +405,6 @@ nav ul li a:not(.cta-button):hover:after {
 
 .service-card:hover {
   transform: translateY(-10px);
-}
-
-.service-icon {
-  font-size: 3rem;
-  margin-bottom: 20px;
-}
-
-.service-card h3 {
-  margin-bottom: 15px;
-  color: var(--primary-color);
-}
-
-/* Crown service card with custom background */
-.crown-service {
-  background: linear-gradient(
-      rgba(255, 255, 255, 0.9),
-      rgba(255, 255, 255, 0.9)
-    ),
-    url("/crownabstract.png") no-repeat center center;
-  background-size: contain;
-  border: 1px solid rgba(74, 144, 226, 0.2);
-}
-
-.crown-service:hover {
-  background: linear-gradient(
-      rgba(255, 255, 255, 0.8),
-      rgba(255, 255, 255, 0.8)
-    ),
-    url("/crownabstract.png") no-repeat center center;
-  background-size: contain;
-}
-
-/* Cosmetic service card with custom background */
-.cosmetic-service {
-  background: linear-gradient(
-      rgba(255, 255, 255, 0.9),
-      rgba(255, 255, 255, 0.9)
-    ),
-    url("/cosmeticdentistry.png") no-repeat center center;
-  background-size: contain;
-  border: 1px solid rgba(74, 144, 226, 0.2);
-}
-
-.cosmetic-service:hover {
-  background: linear-gradient(
-      rgba(255, 255, 255, 0.8),
-      rgba(255, 255, 255, 0.8)
-    ),
-    url("/cosmeticdentistry.png") no-repeat center center;
-  background-size: contain;
-}
-
-/* General dentistry service card with custom background */
-.general-service {
-  background: linear-gradient(
-      rgba(255, 255, 255, 0.9),
-      rgba(255, 255, 255, 0.9)
-    ),
-    url("/gendentistry.png") no-repeat center center;
-  background-size: contain;
-  border: 1px solid rgba(74, 144, 226, 0.2);
-}
-
-.general-service:hover {
-  background: linear-gradient(
-      rgba(255, 255, 255, 0.8),
-      rgba(255, 255, 255, 0.8)
-    ),
-    url("/gendentistry.png") no-repeat center center;
-  background-size: contain;
 }
 
 /* About Section */
@@ -613,12 +630,12 @@ footer {
 @media (max-width: 991px) {
   /* Changed from 768px to 991px to include iPads */
   header {
-    padding: 30px 30px 20px; /* Increased top padding */
+    padding: 30px 40px 20px; /* Match horizontal padding with desktop */
   }
 
   .logo-container {
     flex: 1;
-    padding: 10px 0 10px 10px; /* Added left padding */
+    padding: 10px 0 10px 10px;
   }
 
   .logo-container h1 {
@@ -626,29 +643,17 @@ footer {
     margin-top: 10px; /* Add top margin */
   }
 
-  /* Reduce hero text size on tablets */
-  .hero h2 {
-    font-size: 2.8rem;
-  }
-
-  .hero p {
-    font-size: 1.1rem;
-  }
-
-  .mobile-menu-button {
-    display: flex;
-    margin-top: 15px; /* Increased top margin */
-    padding: 10px 15px; /* Increased padding */
-  }
-
   /* Hide desktop navigation and show mobile menu */
   nav {
     position: absolute;
     top: 100%;
-    left: 0;
-    right: 0;
-    background-color: rgba(255, 255, 255, 0.95); /* Semi-transparent white */
-    backdrop-filter: blur(10px); /* Add blur effect for modern look */
+    left: 20px; /* Match with hero container padding */
+    right: 20px; /* Match with hero container padding */
+    width: calc(100% - 40px); /* Account for the padding */
+    max-width: 1800px; /* Match hero max-width */
+    margin: 0 auto;
+    background-color: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
     padding: 10px 20px 20px;
     clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
@@ -657,7 +662,7 @@ footer {
     z-index: 999;
     border-bottom-left-radius: 15px;
     border-bottom-right-radius: 15px;
-    border: 1px solid rgba(236, 60, 90, 0.1); /* Subtle border matching secondary color */
+    border: 1px solid rgba(236, 60, 90, 0.1);
   }
 
   nav.open {
@@ -709,12 +714,27 @@ footer {
   nav ul li a:after {
     display: none;
   }
+
+  /* Reduce hero text size on tablets */
+  .hero h2 {
+    font-size: 2.8rem;
+  }
+
+  .hero p {
+    font-size: 1.1rem;
+  }
+
+  .mobile-menu-button {
+    display: flex;
+    margin-top: 15px; /* Increased top margin */
+    padding: 10px 15px; /* Increased padding */
+  }
 }
 
 /* Additional responsive adjustments for smaller screens */
 @media (max-width: 768px) {
   header {
-    padding: 35px 20px 20px; /* Even more top padding on mobile */
+    padding: 35px 30px 20px; /* Match horizontal padding with hero on mobile */
   }
 
   .logo-container {
@@ -768,6 +788,13 @@ footer {
 
   .map-container iframe {
     height: 100%;
+  }
+
+  /* Adjust mobile nav positioning for smaller screens */
+  nav {
+    left: 30px; /* Match with hero padding on mobile */
+    right: 30px; /* Match with hero padding on mobile */
+    width: calc(100% - 60px); /* Account for the padding */
   }
 }
 
