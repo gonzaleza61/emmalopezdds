@@ -26,13 +26,13 @@ body {
   font-family: "Roboto", sans-serif;
   line-height: 1.6;
   color: var(--text-color);
-  background-color: white;
+  background-color: #f5f5f7; /* Very light gray background */
 }
 
 .dental-website {
   max-width: 100%;
   overflow-x: hidden;
-  background-color: white;
+  background-color: #f5f5f7; /* Very light gray background */
 }
 
 section {
@@ -232,14 +232,16 @@ nav ul li a:not(.cta-button):hover:after {
 
 /* Hero container with proper spacing */
 .hero-container {
-  background-color: white;
-  padding: 15px 10px 10px 10px; /* Thicker top padding (15px) compared to sides (10px) */
-  margin-top: 15px;
+  background-color: transparent;
+  padding: 10px 0px 10px 0px; /* Remove horizontal padding */
+  margin-top: 10px;
   position: relative;
-  width: 100%;
-  max-width: 1800px;
+  width: calc(100% - 40px); /* Add side margins */
+  max-width: 1530px; /* Match intro-about width */
   margin-left: auto;
   margin-right: auto;
+  border-radius: 20px;
+  overflow: hidden;
 }
 
 /* Hero section with left-aligned text */
@@ -251,12 +253,12 @@ nav ul li a:not(.cta-button):hover:after {
   justify-content: flex-start;
   text-align: left;
   color: var(--light-text);
-  border-radius: 12px; /* Reduced border radius for slimmer peek */
+  border-radius: 12px;
   overflow: hidden;
   position: relative;
   margin: 0 auto;
   max-width: 1800px;
-  padding-top: 120px;
+  padding-top: 100px;
   padding-left: 40px;
   padding-right: 40px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
@@ -286,9 +288,10 @@ nav ul li a:not(.cta-button):hover:after {
 .testimonials,
 .contact,
 footer .footer-content {
-  width: 100%;
-  max-width: 1800px;
-  margin: 0 auto;
+  width: calc(100% - 40px); /* Add side margins */
+  max-width: 1530px; /* Match intro-about width */
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* Improved Intro About Section with adjusted text sizes and spacing */
@@ -296,11 +299,13 @@ footer .footer-content {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 100px 40px;
-  gap: 40px; /* Reduced gap further */
-  background-color: #f9f9f9;
-  max-width: 1800px;
-  margin: 0 auto;
+  padding: 80px 40px;
+  gap: 40px;
+  background-color: white;
+  max-width: 1530px; /* Slightly smaller than container to show background */
+  margin: 40px auto;
+  border-radius: 20px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
 }
 
 .intro-about-content {
@@ -418,13 +423,11 @@ footer .footer-content {
 /* Services Section with white background */
 .services {
   background-color: white;
-  margin-top: 0;
-  padding-top: 60px;
-  padding-bottom: 80px;
-  padding-left: 40px; /* Match padding with hero and header */
-  padding-right: 40px;
-  max-width: 1800px;
-  margin: 0 auto;
+  margin: 40px auto;
+  padding: 60px 40px 80px;
+  max-width: 1530px; /* Match intro-about width */
+  border-radius: 20px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
 }
 
 /* Service cards with improved styling and more visible backgrounds */
@@ -543,10 +546,12 @@ footer .footer-content {
 .about {
   display: flex;
   flex-direction: column;
-  max-width: 1800px;
-  margin: 0 auto;
-  padding-left: 40px; /* Match padding with hero and header */
-  padding-right: 40px;
+  max-width: 1530px; /* Match intro-about width */
+  margin: 40px auto;
+  padding: 60px 40px;
+  background-color: white;
+  border-radius: 20px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
 }
 
 .about-content {
@@ -588,10 +593,11 @@ footer .footer-content {
 /* Testimonials Section */
 .testimonials {
   background-color: white;
-  max-width: 1800px;
-  margin: 0 auto;
-  padding-left: 40px; /* Match padding with hero and header */
-  padding-right: 40px;
+  max-width: 1530px; /* Match intro-about width */
+  margin: 40px auto;
+  padding: 60px 40px;
+  border-radius: 20px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
 }
 
 .testimonial-grid {
@@ -630,10 +636,12 @@ footer .footer-content {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 50px;
-  max-width: 1800px;
-  margin: 0 auto;
-  padding-left: 40px; /* Match padding with hero and header */
-  padding-right: 40px;
+  max-width: 1530px; /* Match intro-about width */
+  margin: 40px auto;
+  padding: 60px 40px;
+  background-color: white;
+  border-radius: 20px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
 }
 
 .contact-info .info-item {
@@ -692,7 +700,7 @@ footer {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 30px;
-  max-width: 1800px;
+  max-width: 1530px; /* Match other sections */
   margin: 0 auto 30px;
 }
 
@@ -896,6 +904,8 @@ footer {
     padding: 60px 40px;
     gap: 40px;
     align-items: center;
+    margin: 30px auto;
+    border-radius: 15px;
   }
 
   .intro-about-content {
@@ -922,6 +932,23 @@ footer {
     max-height: 500px;
     object-position: center;
   }
+
+  .services,
+  .about,
+  .testimonials,
+  .contact {
+    margin: 30px auto;
+    border-radius: 15px;
+  }
+
+  .hero-container,
+  .intro-about,
+  .services,
+  .about,
+  .testimonials,
+  .contact {
+    width: calc(100% - 60px); /* Wider margins on tablet */
+  }
 }
 
 @media (max-width: 768px) {
@@ -938,7 +965,7 @@ footer {
     padding-left: 20px;
     padding-right: 20px;
     justify-content: center;
-    padding-top: 140px;
+    padding-top: 120px; /* Adjusted from 140px */
     border-radius: 10px;
   }
 
@@ -1005,8 +1032,10 @@ footer {
   }
 
   .intro-about {
-    padding: 50px 20px;
+    padding: 40px 20px;
     gap: 30px;
+    margin: 20px auto;
+    border-radius: 15px;
   }
 
   .intro-about-content h2 {
@@ -1037,6 +1066,24 @@ footer {
   .intro-about-content,
   .intro-about-image {
     max-width: 100%; /* Full width on mobile */
+  }
+
+  .services,
+  .about,
+  .testimonials,
+  .contact {
+    margin: 20px auto;
+    padding: 40px 20px;
+    border-radius: 15px;
+  }
+
+  .hero-container,
+  .intro-about,
+  .services,
+  .about,
+  .testimonials,
+  .contact {
+    width: calc(100% - 30px); /* Slightly narrower margins on mobile */
   }
 }
 
