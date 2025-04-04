@@ -58,6 +58,9 @@ function App() {
               <a href="#contact" className="primary-button">
                 Book Appointment
               </a>
+              <a href="#about" className="secondary-button">
+                Learn More About Us
+              </a>
             </div>
           </div>
         </section>
@@ -79,9 +82,12 @@ function App() {
             stress-free. Our gentle approach and attention to detail ensure that
             you receive the highest quality care at every visit.
           </p>
-          <a href="#about" className="about-link">
-            Learn more about us
-          </a>
+          <p>
+            We emphasize preventative care and patient education, helping you
+            maintain optimal oral health between visits. Our team takes the time
+            to understand your unique needs and concerns, creating personalized
+            treatment plans that address your specific goals for your smile.
+          </p>
         </div>
         <div className="intro-about-image">
           <img src="/landscapeabout.jpg" alt="Our dental practice" />
