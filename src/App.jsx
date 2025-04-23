@@ -54,26 +54,17 @@ function App() {
       </header>
 
       {/* Hero Section */}
-      <div className="hero-container">
-        <section id="home" className="hero">
-          <div className="hero-content">
-            <h2>Your Smile, Our Passion</h2>
-            <p>
-              Experience exceptional dental care with Dr. Emma Lopez. We're
-              committed to providing comfortable, state-of-the-art dentistry for
-              your entire family.
-            </p>
-            <div className="hero-buttons">
-              <a href="#contact" className="primary-button">
-                Book Appointment
-              </a>
-              <a href="#about" className="secondary-button">
-                Learn More About Us
-              </a>
-            </div>
+      <section className="hero">
+        <div className="hero-content">
+          <h2>Welcome to Emma Lopez DDS</h2>
+          <p>Your partner in dental health</p>
+          <div className="hero-buttons">
+            <a href="#contact" className="primary-button">
+              Book Appointment
+            </a>
           </div>
-        </section>
-      </div>
+        </div>
+      </section>
 
       {/* New About Us Section */}
       <section className="intro-about">

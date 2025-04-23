@@ -119,18 +119,19 @@ section {
 }
 
 .cta-button {
-  background-color: #ec3c5a;
-  color: var(--light-text) !important;
+  background-color: #40a7ff;
+  color: white !important;
   border: none;
   padding: 10px 20px;
   border-radius: var(--border-radius);
-  transition: var(--transition);
-  font-weight: 600;
+  transition: all 0.3s ease;
+  font-weight: 300;
 }
 
 .cta-button:hover {
-  background-color: #d62e4a;
+  background-color: #2d8de0;
   transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
 /* Header/Navigation with improved padding */
@@ -276,15 +277,15 @@ nav ul li a:not(.cta-button):hover:after {
   overflow: hidden;
 }
 
-/* Hero section with left-aligned text */
+/* Hero section with centered CTA */
 .hero {
-  background: url("/dentalhero.avif") no-repeat center center/cover;
-  height: 100vh;
+  background-color: white;
+  height: 60vh;
   display: flex;
   align-items: center;
-  justify-content: flex-start;
-  text-align: left;
-  color: var(--light-text);
+  justify-content: center;
+  text-align: center;
+  color: #3d3d3d;
   border-radius: 0;
   overflow: hidden;
   position: relative;
@@ -294,145 +295,30 @@ nav ul li a:not(.cta-button):hover:after {
   box-shadow: none;
 }
 
-/* Remove the shadow pseudo-elements */
-.hero::before,
-.hero::after {
-  display: none;
-}
-
 /* Hero content alignment */
 .hero-content {
-  max-width: 600px;
+  max-width: 800px;
   position: relative;
   z-index: 10;
-  padding-left: 0;
-  text-align: left;
-  margin-left: 0;
-}
-
-/* Add responsive container widths for better alignment */
-.hero-container,
-.intro-about,
-.services,
-.about,
-.testimonials,
-.contact,
-footer .footer-content {
-  width: 100%;
-  max-width: 100%;
-  margin-left: 0;
-  margin-right: 0;
-}
-
-/* Improved Intro About Section with adjusted text sizes and spacing */
-.intro-about {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0;
-  gap: 40px;
-  background-color: white;
-  max-width: 100%;
-  margin: 0;
-  border-radius: 0;
-  box-shadow: none;
-}
-
-.intro-about-content {
-  flex: 1; /* Equal flex basis */
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: center;
-  padding-left: 0;
-  margin-left: 0;
-  max-width: 500px; /* Constrain width */
-}
-
-.intro-about-content h2 {
-  font-size: 3rem;
-  font-weight: 700;
-  color: var(--text-color);
-  margin-bottom: 30px;
-  line-height: 1.2;
-  text-align: left;
-}
-
-.intro-about-content p {
-  font-size: 1.05rem;
-  line-height: 1.7;
-  color: var(--text-color);
-  margin-bottom: 20px;
-  max-width: 100%; /* Use full container width */
-  text-align: left;
-}
-
-.intro-about-image {
-  flex: 1; /* Equal flex basis */
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  max-width: 500px; /* Constrain width */
-}
-
-.intro-about-image img {
-  width: 100%;
-  max-width: 100%;
-  height: auto;
-  min-height: 500px;
-  max-height: 550px;
-  object-fit: cover;
-  border-radius: 12px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-}
-
-.about-link {
-  display: inline-block;
-  color: var(--secondary-color);
-  font-weight: 600;
-  font-size: 1.1rem;
-  text-decoration: none;
-  margin-top: 20px;
-  position: relative;
-  text-align: left;
-}
-
-.about-link::after {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 2px;
-  bottom: 0;
-  left: 0;
-  background-color: var(--secondary-color);
-  transform: scaleX(0);
-  transform-origin: bottom right;
-  transition: transform 0.3s ease;
-}
-
-.about-link:hover::after {
-  transform: scaleX(1);
-  transform-origin: bottom left;
+  padding: 0 40px;
+  text-align: center;
+  margin: 0 auto;
 }
 
 /* Add stronger text styling for readability */
 .hero h2 {
   font-size: 3.5rem;
   margin-bottom: 20px;
-  font-weight: 800;
+  font-weight: 300;
   letter-spacing: 1px;
+  color: #3d3d3d;
 }
 
 .hero p {
-  font-size: 1.3rem;
+  font-size: 1.5rem;
   margin-bottom: 30px;
-  font-weight: 500;
-}
-
-/* Add a subtle text shadow for readability if needed */
-.hero-content h2,
-.hero-content p {
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+  font-weight: 300;
+  color: #3d3d3d;
 }
 
 /* Update hero buttons container */
@@ -441,13 +327,47 @@ footer .footer-content {
   margin-top: 30px;
   gap: 15px;
   align-items: center;
-  flex-wrap: wrap; /* Allow wrapping on smaller screens */
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
-/* Make the primary button slightly larger when it's alone */
+/* Make the primary button larger */
 .hero-buttons .primary-button {
-  padding: 14px 28px;
-  font-size: 1.1rem;
+  padding: 16px 32px;
+  font-size: 1.2rem;
+  background: linear-gradient(135deg, #40a7ff 0%, #2d8de0 100%);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-buttons .primary-button:hover {
+  background: linear-gradient(135deg, #2d8de0 0%, #40a7ff 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(64, 167, 255, 0.3);
+}
+
+.hero-buttons .primary-button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.2),
+    transparent
+  );
+  transition: 0.5s;
+}
+
+.hero-buttons .primary-button:hover::before {
+  left: 100%;
 }
 
 /* Services Section with white background */
@@ -889,7 +809,7 @@ footer {
   }
 
   .hero p {
-    font-size: 1.1rem;
+    font-size: 1.3rem;
   }
 
   .mobile-menu-button {
@@ -996,11 +916,7 @@ footer {
   }
 
   .hero {
-    padding-left: 0;
-    padding-right: 0;
-    justify-content: center;
-    padding-top: 120px; /* Adjusted from 140px */
-    border-radius: 10px;
+    height: 50vh;
   }
 
   .hero-content {
@@ -1041,7 +957,7 @@ footer {
   }
 
   .hero p {
-    font-size: 1rem;
+    font-size: 1.1rem;
   }
 
   .contact {
@@ -1056,13 +972,9 @@ footer {
     height: 100%;
   }
 
-  .hero-buttons .primary-button,
-  .hero-buttons .secondary-button {
-    padding: 12px 24px;
-    font-size: 1rem;
-    width: auto;
-    max-width: none;
-    margin: 0 8px;
+  .hero-buttons .primary-button {
+    padding: 14px 28px;
+    font-size: 1.1rem;
   }
 
   .intro-about {
@@ -1128,41 +1040,18 @@ footer {
 
 /* Specific styling for hero primary button with gradient */
 .hero .primary-button {
-  background: linear-gradient(135deg, var(--secondary-color) 0%, #ff6b8b 100%);
-  color: var(--light-text);
+  background-color: #40a7ff;
+  color: white;
   border: none;
-  font-weight: 600;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  transition: all 0.4s ease;
-  position: relative;
-  overflow: hidden;
+  font-weight: 300;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
 }
 
 .hero .primary-button:hover {
-  background: linear-gradient(135deg, #ff6b8b 0%, var(--secondary-color) 100%);
-  color: white;
+  background-color: #2d8de0;
   transform: translateY(-2px);
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
-}
-
-.hero .primary-button::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(
-    90deg,
-    transparent,
-    rgba(255, 255, 255, 0.2),
-    transparent
-  );
-  transition: 0.5s;
-}
-
-.hero .primary-button:hover::before {
-  left: 100%;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
 /* Style the secondary button in hero section */
@@ -1184,21 +1073,21 @@ footer {
 
 /* Update CTA button with gradient */
 .cta-button {
-  background: linear-gradient(135deg, var(--secondary-color) 0%, #ff6b8b 100%);
-  color: var(--light-text) !important;
+  background: linear-gradient(135deg, #40a7ff 0%, #2d8de0 100%);
+  color: white !important;
   border: none;
   padding: 10px 20px;
   border-radius: var(--border-radius);
-  transition: all 0.4s ease;
-  font-weight: 600;
+  transition: all 0.3s ease;
+  font-weight: 300;
   position: relative;
   overflow: hidden;
 }
 
 .cta-button:hover {
-  background: linear-gradient(135deg, #ff6b8b 0%, var(--secondary-color) 100%);
+  background: linear-gradient(135deg, #2d8de0 0%, #40a7ff 100%);
   transform: translateY(-2px);
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 5px 15px rgba(64, 167, 255, 0.3);
 }
 
 .cta-button::before {
@@ -1219,6 +1108,18 @@ footer {
 
 .cta-button:hover::before {
   left: 100%;
+}
+
+/* Update mobile styles */
+@media (max-width: 768px) {
+  .hero-buttons .primary-button {
+    padding: 14px 28px;
+    font-size: 1.1rem;
+  }
+
+  .cta-button {
+    padding: 8px 16px;
+  }
 }
 
 .logo-link {
