@@ -23,10 +23,42 @@ html {
 }
 
 body {
-  font-family: "Roboto", sans-serif;
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
   line-height: 1.6;
   color: var(--text-color);
   background-color: #f5f5f7; /* Very light gray background */
+}
+
+/* Update font weights for different elements */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+}
+
+.primary-button,
+.secondary-button,
+.cta-button {
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+}
+
+nav ul li a {
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+}
+
+.footer-logo p,
+.footer-links ul li a,
+.footer-social h3,
+.footer-bottom p {
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
 }
 
 .dental-website {
@@ -106,39 +138,39 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 30px 40px 20px; /* Increased top padding from 20px to 30px */
-  background-color: transparent;
-  position: absolute;
+  padding: 10px 40px;
+  background-color: white;
+  position: static;
   top: 0;
   left: 0;
   right: 0;
   z-index: 1000;
-  box-shadow: none;
-  border-bottom: none;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
 }
 
 /* Logo container with improved padding */
 .logo-container {
   flex: 1;
-  max-width: 300px;
-  padding: 10px 0;
-  padding-left: 0; /* Ensure no extra padding */
+  max-width: 400px;
+  padding: 5px 0;
+  padding-left: 0;
 }
 
 /* Logo styling without background */
 .logo-container h1 {
-  color: var(--light-text);
-  font-size: 2rem;
+  color: #3d3d3d;
+  font-size: 1.8rem;
   margin: 0;
   font-weight: 300;
   letter-spacing: 1.5px;
   display: inline-block;
   border-bottom: none;
   padding-bottom: 0;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  text-shadow: none;
   text-transform: uppercase;
   background-color: transparent;
-  padding: 5px 0;
+  padding: 0;
   border-radius: 0;
 }
 
@@ -159,30 +191,32 @@ nav ul {
   justify-content: flex-end;
   align-items: center;
   gap: 25px;
-  margin-right: 0; /* Remove right margin */
+  margin-right: 0;
 }
 
 nav ul li:last-child {
-  margin-left: 25px; /* Match the gap between items instead of auto */
+  margin-left: 25px;
 }
 
 nav ul li a {
   text-decoration: none;
-  color: var(--light-text);
+  color: #3d3d3d;
   font-weight: 500;
   transition: var(--transition);
-  padding: 8px 0;
+  padding: 5px 0;
   position: relative;
-  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+  text-shadow: none;
 }
 
 nav ul li a.cta-button {
-  padding: 10px 20px;
+  padding: 8px 16px;
   border-radius: var(--border-radius);
+  background-color: #40a7ff;
+  color: white;
 }
 
 nav ul li a:not(.cta-button):hover {
-  color: var(--secondary-color);
+  color: #40a7ff;
 }
 
 nav ul li a:not(.cta-button):after {
@@ -192,7 +226,7 @@ nav ul li a:not(.cta-button):after {
   height: 2px;
   bottom: 0;
   left: 0;
-  background-color: var(--secondary-color);
+  background-color: #40a7ff;
   transition: width 0.3s ease;
 }
 
@@ -206,19 +240,19 @@ nav ul li a:not(.cta-button):hover:after {
   flex-direction: column;
   cursor: pointer;
   padding: 10px;
-  background-color: transparent; /* Remove background */
+  background-color: transparent;
   border-radius: var(--border-radius);
-  margin-right: 0; /* Remove right margin */
+  margin-right: 0;
 }
 
 /* Enhanced shadow for mobile menu button lines */
 .mobile-menu-button span {
   width: 25px;
   height: 3px;
-  background-color: var(--light-text);
+  background-color: #3d3d3d;
   margin: 3px 0;
   transition: var(--transition);
-  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.5); /* Enhanced shadow for visibility */
+  box-shadow: none;
 }
 
 /* Common section layout for consistent alignment */
@@ -226,42 +260,38 @@ nav ul li a:not(.cta-button):hover:after {
   width: 100%;
   max-width: 1800px;
   margin: 0 auto;
-  padding-left: 40px;
-  padding-right: 40px;
+  padding-left: 0;
+  padding-right: 0;
 }
 
 /* Hero container with proper spacing */
 .hero-container {
   background-color: transparent;
-  padding: 10px 0px 10px 0px; /* Remove horizontal padding */
-  margin-top: 10px;
+  padding: 0;
+  margin: 0;
   position: relative;
-  width: calc(100% - 40px); /* Add side margins */
-  max-width: 1530px; /* Match intro-about width */
-  margin-left: auto;
-  margin-right: auto;
-  border-radius: 20px;
+  width: 100%;
+  max-width: 100%;
+  border-radius: 0;
   overflow: hidden;
 }
 
 /* Hero section with left-aligned text */
 .hero {
   background: url("/dentalhero.avif") no-repeat center center/cover;
-  height: 95vh;
+  height: 100vh;
   display: flex;
   align-items: center;
   justify-content: flex-start;
   text-align: left;
   color: var(--light-text);
-  border-radius: 12px;
+  border-radius: 0;
   overflow: hidden;
   position: relative;
-  margin: 0 auto;
-  max-width: 1800px;
-  padding-top: 100px;
-  padding-left: 40px;
-  padding-right: 40px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  margin: 0;
+  max-width: 100%;
+  padding: 0;
+  box-shadow: none;
 }
 
 /* Remove the shadow pseudo-elements */
@@ -275,9 +305,9 @@ nav ul li a:not(.cta-button):hover:after {
   max-width: 600px;
   position: relative;
   z-index: 10;
-  padding-left: 0; /* No extra padding */
+  padding-left: 0;
   text-align: left;
-  margin-left: 0; /* Ensure no left margin */
+  margin-left: 0;
 }
 
 /* Add responsive container widths for better alignment */
@@ -288,10 +318,10 @@ nav ul li a:not(.cta-button):hover:after {
 .testimonials,
 .contact,
 footer .footer-content {
-  width: calc(100% - 40px); /* Add side margins */
-  max-width: 1530px; /* Match intro-about width */
-  margin-left: auto;
-  margin-right: auto;
+  width: 100%;
+  max-width: 100%;
+  margin-left: 0;
+  margin-right: 0;
 }
 
 /* Improved Intro About Section with adjusted text sizes and spacing */
@@ -299,13 +329,13 @@ footer .footer-content {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 80px 40px;
+  padding: 0;
   gap: 40px;
   background-color: white;
-  max-width: 1530px; /* Slightly smaller than container to show background */
-  margin: 40px auto;
-  border-radius: 20px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  max-width: 100%;
+  margin: 0;
+  border-radius: 0;
+  box-shadow: none;
 }
 
 .intro-about-content {
@@ -423,11 +453,11 @@ footer .footer-content {
 /* Services Section with white background */
 .services {
   background-color: white;
-  margin: 40px auto;
-  padding: 60px 40px 80px;
-  max-width: 1530px; /* Match intro-about width */
-  border-radius: 20px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  margin: 0;
+  padding: 60px 0 80px;
+  max-width: 100%;
+  border-radius: 0;
+  box-shadow: none;
 }
 
 /* Service cards with improved styling and more visible backgrounds */
@@ -546,12 +576,12 @@ footer .footer-content {
 .about {
   display: flex;
   flex-direction: column;
-  max-width: 1530px; /* Match intro-about width */
-  margin: 40px auto;
-  padding: 60px 40px;
+  max-width: 100%;
+  margin: 0;
+  padding: 60px 0;
   background-color: white;
-  border-radius: 20px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  border-radius: 0;
+  box-shadow: none;
 }
 
 .about-content {
@@ -593,11 +623,11 @@ footer .footer-content {
 /* Testimonials Section */
 .testimonials {
   background-color: white;
-  max-width: 1530px; /* Match intro-about width */
-  margin: 40px auto;
-  padding: 60px 40px;
-  border-radius: 20px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  max-width: 100%;
+  margin: 0;
+  padding: 60px 0;
+  border-radius: 0;
+  box-shadow: none;
 }
 
 .testimonial-grid {
@@ -636,12 +666,12 @@ footer .footer-content {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 50px;
-  max-width: 1530px; /* Match intro-about width */
-  margin: 40px auto;
-  padding: 60px 40px;
+  max-width: 100%;
+  margin: 0;
+  padding: 60px 0;
   background-color: white;
-  border-radius: 20px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  border-radius: 0;
+  box-shadow: none;
 }
 
 .contact-info .info-item {
@@ -693,7 +723,8 @@ footer .footer-content {
 footer {
   background-color: var(--dark-bg);
   color: var(--light-text);
-  padding: 50px 40px 20px; /* Match padding with other sections */
+  padding: 50px 0 20px;
+  margin: 0;
 }
 
 .footer-content {
@@ -704,21 +735,22 @@ footer {
   margin: 0 auto 30px;
 }
 
-.footer-logo h2 {
-  color: var(--light-text);
-  margin-bottom: 15px;
-  font-size: 1.8rem;
-  display: inline-block;
-  border-bottom: none;
-  padding-bottom: 0;
-  font-weight: 300;
-  letter-spacing: 1.5px;
-  text-transform: uppercase;
+.footer-logo {
+  text-align: left;
+  margin-bottom: 20px;
 }
 
-.footer-logo .dds-text {
-  color: var(--secondary-color);
-  background-color: rgba(236, 60, 90, 0.15);
+.footer-logo img {
+  height: 80px;
+  width: auto;
+  margin-bottom: 10px;
+  display: block;
+}
+
+.footer-logo p {
+  color: var(--light-text);
+  margin: 0;
+  font-size: 1.1rem;
 }
 
 .footer-links h3,
@@ -777,11 +809,11 @@ footer {
 /* Media queries for tablet responsiveness */
 @media (max-width: 991px) {
   header {
-    padding: 30px 40px 20px; /* Consistent 40px padding */
+    padding: 10px 40px;
   }
 
   .logo-container h1 {
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     margin-top: 0;
   }
 
@@ -789,12 +821,12 @@ footer {
   nav {
     position: absolute;
     top: 100%;
-    left: 40px; /* Consistent 40px padding */
+    left: 40px;
     right: 40px;
-    width: calc(100% - 80px); /* Account for the padding */
+    width: calc(100% - 80px);
     max-width: 1800px;
     margin: 0 auto;
-    background-color: rgba(255, 255, 255, 0.95);
+    background-color: white;
     backdrop-filter: blur(10px);
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
     padding: 10px 20px 20px;
@@ -804,7 +836,7 @@ footer {
     z-index: 999;
     border-bottom-left-radius: 15px;
     border-bottom-right-radius: 15px;
-    border: 1px solid rgba(236, 60, 90, 0.1);
+    border: 1px solid rgba(0, 0, 0, 0.05);
   }
 
   nav.open {
@@ -814,15 +846,15 @@ footer {
   nav ul {
     flex-direction: column;
     width: 100%;
-    align-items: flex-start; /* Left align nav items */
-    text-align: left; /* Left align nav text */
+    align-items: flex-start;
+    text-align: left;
   }
 
   nav ul li {
     margin: 0;
     width: 100%;
-    text-align: left; /* Left align nav text */
-    border-bottom: 1px solid rgba(236, 60, 90, 0.1);
+    text-align: left;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
     padding: 12px 0;
   }
 
@@ -834,7 +866,7 @@ footer {
   }
 
   nav ul li a:not(.cta-button) {
-    color: var(--text-color);
+    color: #3d3d3d;
     text-shadow: none;
     font-weight: 500;
     display: block;
@@ -847,6 +879,8 @@ footer {
     max-width: 250px;
     padding: 12px 20px;
     margin: 0 auto;
+    background-color: #40a7ff;
+    color: white;
   }
 
   /* Reduce hero text size on tablets */
@@ -865,8 +899,8 @@ footer {
   }
 
   .hero {
-    padding-left: 40px; /* Consistent 40px padding */
-    padding-right: 40px;
+    padding-left: 0;
+    padding-right: 0;
   }
 
   .intro-about,
@@ -875,8 +909,8 @@ footer {
   .testimonials,
   .contact,
   footer {
-    padding-left: 40px; /* Consistent 40px padding */
-    padding-right: 40px;
+    padding-left: 0;
+    padding-right: 0;
   }
 
   /* Ensure all content is center-aligned on tablet */
@@ -947,23 +981,23 @@ footer {
   .about,
   .testimonials,
   .contact {
-    width: calc(100% - 60px); /* Wider margins on tablet */
+    width: 100%;
   }
 }
 
 @media (max-width: 768px) {
   header {
-    padding: 35px 20px 20px;
+    padding: 10px 20px;
   }
 
   .logo-container h1 {
-    font-size: 1.6rem;
+    font-size: 1.4rem;
     margin-top: 0;
   }
 
   .hero {
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-left: 0;
+    padding-right: 0;
     justify-content: center;
     padding-top: 120px; /* Adjusted from 140px */
     border-radius: 10px;
@@ -990,8 +1024,8 @@ footer {
   .testimonials,
   .contact,
   footer {
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-left: 0;
+    padding-right: 0;
   }
 
   .about-content {
@@ -1083,7 +1117,12 @@ footer {
   .about,
   .testimonials,
   .contact {
-    width: calc(100% - 30px); /* Slightly narrower margins on mobile */
+    width: 100%;
+  }
+
+  .footer-logo img {
+    height: 70px;
+    margin: 0 auto 10px;
   }
 }
 
@@ -1180,4 +1219,26 @@ footer {
 
 .cta-button:hover::before {
   left: 100%;
+}
+
+.logo-link {
+  display: block;
+  text-decoration: none;
+  transition: transform 0.3s ease;
+}
+
+.logo-link:hover {
+  transform: scale(1.05);
+}
+
+.logo-image {
+  height: 120px;
+  width: auto;
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .logo-image {
+    height: 100px;
+  }
 }

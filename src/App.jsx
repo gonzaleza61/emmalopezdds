@@ -10,16 +10,14 @@ function App() {
       <header>
         <div className="logo-container">
           <h1>
-            Emma Lopez <span className="dds-text">DDS</span>
+            <a href="#" className="logo-link">
+              <img
+                src="/emmalogotr.svg"
+                alt="Emma Lopez DDS"
+                className="logo-image"
+              />
+            </a>
           </h1>
-        </div>
-        <div
-          className="mobile-menu-button"
-          onClick={() => setIsMenuOpen(!isMenuOpen)}
-        >
-          <span></span>
-          <span></span>
-          <span></span>
         </div>
         <nav className={isMenuOpen ? "open" : ""}>
           <ul>
@@ -30,10 +28,13 @@ function App() {
               <a href="#services">Services</a>
             </li>
             <li>
-              <a href="#about">About Us</a>
+              <a href="#about">About</a>
             </li>
             <li>
               <a href="#testimonials">Testimonials</a>
+            </li>
+            <li>
+              <a href="#contact">Contact</a>
             </li>
             <li>
               <a href="#contact" className="cta-button">
@@ -42,6 +43,14 @@ function App() {
             </li>
           </ul>
         </nav>
+        <button
+          className="mobile-menu-button"
+          onClick={() => setIsMenuOpen(!isMenuOpen)}
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
       </header>
 
       {/* Hero Section */}
@@ -267,7 +276,11 @@ function App() {
         <div className="footer-content">
           <div className="footer-logo">
             <h2>
-              Emma Lopez <span className="dds-text">DDS</span>
+              <img
+                src="/emmalogotr.svg"
+                alt="Emma Lopez DDS"
+                className="logo-image"
+              />
             </h2>
             <p>Your partner in dental health</p>
           </div>
@@ -281,7 +294,7 @@ function App() {
                 <a href="#services">Services</a>
               </li>
               <li>
-                <a href="#about">About Us</a>
+                <a href="#about">About</a>
               </li>
               <li>
                 <a href="#testimonials">Testimonials</a>
