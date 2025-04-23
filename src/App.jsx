@@ -4,6 +4,10 @@ import "./App.css";
 function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
   return (
     <div className="dental-website">
       {/* Header/Navigation */}
@@ -43,10 +47,7 @@ function App() {
             </li>
           </ul>
         </nav>
-        <button
-          className="mobile-menu-button"
-          onClick={() => setIsMenuOpen(!isMenuOpen)}
-        >
+        <button className="mobile-menu-button" onClick={toggleMenu}>
           <span></span>
           <span></span>
           <span></span>

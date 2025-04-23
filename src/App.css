@@ -729,7 +729,7 @@ footer {
 /* Media queries for tablet responsiveness */
 @media (max-width: 991px) {
   header {
-    padding: 10px 40px;
+    padding: 10px 20px;
   }
 
   .logo-container h1 {
@@ -741,11 +741,11 @@ footer {
   nav {
     position: absolute;
     top: 100%;
-    left: 40px;
-    right: 40px;
-    width: calc(100% - 80px);
-    max-width: 1800px;
-    margin: 0 auto;
+    left: 0;
+    right: 0;
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
     background-color: white;
     backdrop-filter: blur(10px);
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
@@ -754,8 +754,8 @@ footer {
     transition: var(--transition);
     justify-content: flex-start;
     z-index: 999;
-    border-bottom-left-radius: 15px;
-    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
     border: 1px solid rgba(0, 0, 0, 0.05);
   }
 
@@ -766,14 +766,14 @@ footer {
   nav ul {
     flex-direction: column;
     width: 100%;
-    align-items: flex-start;
-    text-align: left;
+    align-items: center;
+    text-align: center;
   }
 
   nav ul li {
     margin: 0;
     width: 100%;
-    text-align: left;
+    text-align: center;
     border-bottom: 1px solid rgba(0, 0, 0, 0.05);
     padding: 12px 0;
   }
@@ -799,7 +799,7 @@ footer {
     max-width: 250px;
     padding: 12px 20px;
     margin: 0 auto;
-    background-color: #40a7ff;
+    background: linear-gradient(135deg, #40a7ff 0%, #2d8de0 100%);
     color: white;
   }
 
@@ -921,7 +921,7 @@ footer {
 
   .hero-content {
     text-align: center;
-    padding-left: 0;
+    padding: 0 20px;
     width: 100%;
     max-width: 100%;
   }
@@ -940,8 +940,7 @@ footer {
   .testimonials,
   .contact,
   footer {
-    padding-left: 0;
-    padding-right: 0;
+    padding: 40px 20px;
   }
 
   .about-content {
@@ -1004,9 +1003,9 @@ footer {
   }
 
   nav {
-    left: 20px;
-    right: 20px;
-    width: calc(100% - 40px);
+    left: 0;
+    right: 0;
+    width: 100%;
   }
 
   .intro-about-content,
