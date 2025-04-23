@@ -106,7 +106,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 40px; /* Increased side padding for better alignment */
+  padding: 30px 40px 20px; /* Increased top padding from 20px to 30px */
   background-color: transparent;
   position: absolute;
   top: 0;
