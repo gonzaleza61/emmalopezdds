@@ -280,7 +280,7 @@ nav ul li a:not(.cta-button):hover:after {
 /* Hero section with centered CTA */
 .hero {
   background-color: white;
-  height: 60vh;
+  height: 70vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -291,7 +291,7 @@ nav ul li a:not(.cta-button):hover:after {
   position: relative;
   margin: 0;
   max-width: 100%;
-  padding: 0;
+  padding: 40px 0;
   box-shadow: none;
 }
 
@@ -821,6 +821,8 @@ footer {
   .hero {
     padding-left: 0;
     padding-right: 0;
+    height: 65vh;
+    padding: 30px 0;
   }
 
   .intro-about,
@@ -916,7 +918,8 @@ footer {
   }
 
   .hero {
-    height: 50vh;
+    height: 60vh;
+    padding: 20px 0;
   }
 
   .hero-content {
