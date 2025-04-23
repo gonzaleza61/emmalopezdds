@@ -16,7 +16,7 @@ function App() {
           <h1>
             <a href="#" className="logo-link">
               <img
-                src="/emmalogotr.svg"
+                src="/emmalogosolo.png"
                 alt="Emma Lopez DDS"
                 className="logo-image"
               />
@@ -26,28 +26,41 @@ function App() {
         <nav className={isMenuOpen ? "open" : ""}>
           <ul>
             <li>
-              <a href="#home">Home</a>
+              <a href="#services" onClick={() => setIsMenuOpen(false)}>
+                Services
+              </a>
             </li>
             <li>
-              <a href="#services">Services</a>
+              <a href="#about" onClick={() => setIsMenuOpen(false)}>
+                About
+              </a>
             </li>
             <li>
-              <a href="#about">About</a>
+              <a href="#testimonials" onClick={() => setIsMenuOpen(false)}>
+                Testimonials
+              </a>
             </li>
             <li>
-              <a href="#testimonials">Testimonials</a>
+              <a href="#contact" onClick={() => setIsMenuOpen(false)}>
+                Contact
+              </a>
             </li>
             <li>
-              <a href="#contact">Contact</a>
-            </li>
-            <li>
-              <a href="#contact" className="cta-button">
+              <a
+                href="#contact"
+                className="cta-button"
+                onClick={() => setIsMenuOpen(false)}
+              >
                 Book Appointment
               </a>
             </li>
           </ul>
         </nav>
-        <button className="mobile-menu-button" onClick={toggleMenu}>
+        <button
+          className="mobile-menu-button"
+          onClick={toggleMenu}
+          aria-label="Toggle menu"
+        >
           <span></span>
           <span></span>
           <span></span>
@@ -56,13 +69,22 @@ function App() {
 
       {/* Hero Section */}
       <section className="hero">
-        <div className="hero-content">
-          <h2>Welcome to Emma Lopez DDS</h2>
-          <p>Your partner in dental health</p>
-          <div className="hero-buttons">
-            <a href="#contact" className="primary-button">
-              Book Appointment
-            </a>
+        <div className="hero-split">
+          <div className="hero-logo">
+            <img
+              src="/emmalogotr.svg"
+              alt="Emma Lopez DDS"
+              className="hero-logo-image"
+            />
+          </div>
+          <div className="hero-content">
+            <h2>Welcome to Emma Lopez DDS</h2>
+            <p>Your partner in dental health</p>
+            <div className="hero-buttons">
+              <a href="#contact" className="primary-button">
+                Book Appointment
+              </a>
+            </div>
           </div>
         </div>
       </section>
