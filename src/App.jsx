@@ -13,15 +13,14 @@ function App() {
       {/* Header/Navigation */}
       <header>
         <div className="logo-container">
-          <h1>
-            <a href="#" className="logo-link">
-              <img
-                src="/emmalogosolo.png"
-                alt="Emma Lopez DDS"
-                className="logo-image"
-              />
-            </a>
-          </h1>
+          <a href="#" className="logo-link">
+            <img
+              src="/emmalogotr.svg"
+              alt="Emma Lopez DDS"
+              className="logo-image"
+              style={{ display: "block", height: "75px", width: "auto" }}
+            />
+          </a>
         </div>
         <nav className={isMenuOpen ? "open" : ""}>
           <ul>
@@ -38,11 +37,6 @@ function App() {
             <li>
               <a href="#testimonials" onClick={() => setIsMenuOpen(false)}>
                 Testimonials
-              </a>
-            </li>
-            <li>
-              <a href="#contact" onClick={() => setIsMenuOpen(false)}>
-                Contact
               </a>
             </li>
             <li>
