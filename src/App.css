@@ -800,8 +800,8 @@ footer {
     min-height: 800px;
     padding: 20px;
     background: linear-gradient(
-        rgba(255, 255, 255, 0.8),
-        rgba(255, 255, 255, 0.8)
+        rgba(255, 255, 255, 0.7),
+        rgba(255, 255, 255, 0.7)
       ),
       url("/portraithero.jpg") no-repeat center center/cover;
     width: 100%;
@@ -894,11 +894,11 @@ footer {
 
   .hero-content {
     height: 120vh;
-    min-height: 760px;
+    min-height: 780px;
     padding: 20px;
     background: linear-gradient(
-        rgba(255, 255, 255, 0.8),
-        rgba(255, 255, 255, 0.8)
+        rgba(255, 255, 255, 0.7),
+        rgba(255, 255, 255, 0.7)
       ),
       url("/portraithero.jpg") no-repeat center center/cover;
     width: 100%;
