@@ -51,7 +51,7 @@ function App() {
           </ul>
         </nav>
         <button
-          className="mobile-menu-button"
+          className={`mobile-menu-button ${isMenuOpen ? "open" : ""}`}
           onClick={toggleMenu}
           aria-label="Toggle menu"
         >
