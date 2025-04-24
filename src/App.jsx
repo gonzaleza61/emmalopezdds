@@ -72,8 +72,11 @@ function App() {
             />
           </div>
           <div className="hero-content">
-            <h2>Welcome to Emma Lopez DDS</h2>
-            <p>Your partner in dental health</p>
+            <h2>Smile Brighter. Feel Better.</h2>
+            <p>
+              Let us help you achieve the smile you've always wanted—with
+              personalized dental solutions that fit your life.
+            </p>
             <div className="hero-buttons">
               <a href="#contact" className="primary-button">
                 Book Appointment
