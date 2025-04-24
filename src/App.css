@@ -768,7 +768,7 @@ footer {
 @media (max-width: 991px) {
   .hero {
     height: auto;
-    min-height: 100vh;
+    min-height: 120vh;
   }
 
   .hero-split {
@@ -780,8 +780,8 @@ footer {
   }
 
   .hero-content {
-    height: 100vh;
-    min-height: 600px;
+    height: 120vh;
+    min-height: 800px;
     padding: 20px;
     background: linear-gradient(
         rgba(255, 255, 255, 0.85),
@@ -847,7 +847,7 @@ footer {
 @media (max-width: 768px) {
   .hero {
     height: auto;
-    min-height: 100vh;
+    min-height: 120vh;
   }
 
   .hero-split {
@@ -859,8 +859,8 @@ footer {
   }
 
   .hero-content {
-    height: 100vh;
-    min-height: 500px;
+    height: 120vh;
+    min-height: 700px;
     padding: 20px;
     background: linear-gradient(
         rgba(255, 255, 255, 0.85),
