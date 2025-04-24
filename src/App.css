@@ -784,8 +784,8 @@ footer {
     min-height: 600px;
     padding: 20px;
     background: linear-gradient(
-        rgba(255, 255, 255, 0.9),
-        rgba(255, 255, 255, 0.9)
+        rgba(255, 255, 255, 0.85),
+        rgba(255, 255, 255, 0.85)
       ),
       url("/portraithero.jpg") no-repeat center center/cover;
   }
@@ -804,16 +804,18 @@ footer {
     top: 0;
     left: 0;
     right: 0;
-    bottom: 0;
     background-color: white;
     padding: 80px 20px 20px;
     z-index: 999;
     width: 100vw;
-    height: 100vh;
+    height: auto;
+    transform: translateY(-100%);
+    transition: transform 0.3s ease-in-out;
   }
 
   nav.open {
     display: flex;
+    transform: translateY(0);
   }
 
   nav ul {
@@ -861,8 +863,8 @@ footer {
     min-height: 500px;
     padding: 20px;
     background: linear-gradient(
-        rgba(255, 255, 255, 0.9),
-        rgba(255, 255, 255, 0.9)
+        rgba(255, 255, 255, 0.85),
+        rgba(255, 255, 255, 0.85)
       ),
       url("/portraithero.jpg") no-repeat center center/cover;
   }
@@ -885,7 +887,7 @@ footer {
 
   nav {
     width: 100vw;
-    height: 100vh;
+    height: auto;
   }
 }
 
