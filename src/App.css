@@ -891,7 +891,7 @@ footer {
 
   .hero-content {
     height: 120vh;
-    min-height: 700px;
+    min-height: 760px;
     padding: 20px;
     background: linear-gradient(
         rgba(255, 255, 255, 0.8),
@@ -914,6 +914,7 @@ footer {
   .mobile-menu-button {
     display: flex;
     padding: 5px;
+
     margin-top: 8px;
   }
 
