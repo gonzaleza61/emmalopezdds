@@ -12,53 +12,43 @@ function App() {
     <div className="dental-website">
       {/* Header/Navigation */}
       <header>
-        <div className="logo-container">
-          <a href="#" className="logo-link">
-            <img
-              src="/emmalogotr.svg"
-              alt="Emma Lopez DDS"
-              className="logo-image"
-              style={{ display: "block", height: "75px", width: "auto" }}
-            />
-          </a>
+        <div className="max-width-container">
+          <div className="logo-container">
+            <a href="#" className="logo-link">
+              <img
+                src="/emmalogotr.svg"
+                alt="Emma Lopez DDS"
+                className="logo-image"
+              />
+            </a>
+          </div>
+          <nav className={isMenuOpen ? "open" : ""}>
+            <ul>
+              <li>
+                <a href="#about">About</a>
+              </li>
+              <li>
+                <a href="#services">Services</a>
+              </li>
+              <li>
+                <a href="#testimonials">Testimonials</a>
+              </li>
+              <li>
+                <a href="#contact" className="cta-button">
+                  Book Appointment
+                </a>
+              </li>
+            </ul>
+          </nav>
+          <button
+            className={`mobile-menu-button ${isMenuOpen ? "open" : ""}`}
+            onClick={toggleMenu}
+          >
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
         </div>
-        <nav className={isMenuOpen ? "open" : ""}>
-          <ul>
-            <li>
-              <a href="#services" onClick={() => setIsMenuOpen(false)}>
-                Services
-              </a>
-            </li>
-            <li>
-              <a href="#about" onClick={() => setIsMenuOpen(false)}>
-                About
-              </a>
-            </li>
-            <li>
-              <a href="#testimonials" onClick={() => setIsMenuOpen(false)}>
-                Testimonials
-              </a>
-            </li>
-            <li>
-              <a
-                href="#contact"
-                className="cta-button"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                Book Appointment
-              </a>
-            </li>
-          </ul>
-        </nav>
-        <button
-          className={`mobile-menu-button ${isMenuOpen ? "open" : ""}`}
-          onClick={toggleMenu}
-          aria-label="Toggle menu"
-        >
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
       </header>
 
       {/* Hero Section */}
@@ -72,15 +62,21 @@ function App() {
             />
           </div>
           <div className="hero-content">
-            <h2>Smile Brighter. Feel Better.</h2>
-            <p>
-              Let us help you achieve the smile you've always wanted—with
-              personalized dental solutions that fit your life.
-            </p>
-            <div className="hero-buttons">
-              <a href="#contact" className="primary-button">
-                Book Appointment
-              </a>
+            <div className="max-width-container">
+              <h2>A Healthier, Brighter Smile Awaits</h2>
+              <p>
+                Comprehensive dental care with a gentle touch. Whether you're
+                due for a check-up or dreaming of a new smile, we're here to
+                help you shine.
+              </p>
+              <div className="hero-buttons">
+                <a href="#contact" className="cta-button">
+                  <span>Book Appointment</span>
+                </a>
+                <a href="#services" className="secondary-button">
+                  Learn More
+                </a>
+              </div>
             </div>
           </div>
         </div>
@@ -88,64 +84,51 @@ function App() {
 
       {/* New About Us Section */}
       <section className="intro-about">
-        <div className="intro-about-content">
-          <h2>Welcome to Emma Lopez DDS</h2>
-          <p>
-            At our practice, we believe that a healthy smile is essential to
-            your overall wellbeing. Dr. Emma Lopez and our dedicated team
-            provide personalized dental care in a comfortable, modern
-            environment using the latest technology and techniques.
-          </p>
-          <p>
-            Whether you're visiting for a routine cleaning or a complete smile
-            makeover, we're committed to making your experience positive and
-            stress-free. Our gentle approach and attention to detail ensure that
-            you receive the highest quality care at every visit.
-          </p>
-          <p>
-            We emphasize preventative care and patient education, helping you
-            maintain optimal oral health between visits. Our team takes the time
-            to understand your unique needs and concerns, creating personalized
-            treatment plans that address your specific goals for your smile.
-          </p>
-        </div>
-        <div className="intro-about-image">
-          <img src="/landscapeabout.jpg" alt="Our dental practice" />
-        </div>
-      </section>
-
-      {/* Services Section */}
-      <section id="services" className="services">
-        <h2 className="section-title">Our Services</h2>
-        <div className="services-grid">
-          <div className="service-card general-service">
-            <div className="service-icon">🦷</div>
-            <h3>General Dentistry</h3>
+        <div className="max-width-container">
+          <div className="intro-about-content">
+            <h2>About Our Practice</h2>
             <p>
-              Comprehensive check-ups, cleanings, and preventative care for all
-              ages.
+              At our clinic, your comfort and care come first. We are passionate
+              about creating a welcoming environment where patients of all ages
+              can feel relaxed and confident in their dental care. Using
+              state-of-the-art technology and a gentle approach, we deliver
+              personalized treatments that support long-term oral health and
+              radiant smiles.
             </p>
-          </div>
-          <div className="service-card cosmetic-service">
-            <div className="service-icon">✨</div>
-            <h3>Cosmetic Dentistry</h3>
             <p>
-              Teeth whitening, veneers, and smile makeovers to enhance your
-              smile.
+              Whether you're here for a routine check-up, cosmetic enhancement,
+              or restorative procedure, our dedicated team is committed to
+              making every visit positive, informative, and stress-free.
             </p>
-          </div>
-          <div className="service-card crown-service">
-            <div className="service-icon">👑</div>
-            <h3>Crown Placement</h3>
-            <p>
-              Restore damaged teeth with custom-made crowns for strength and
-              aesthetics.
-            </p>
-          </div>
-          <div className="service-card">
-            <div className="service-icon">😁</div>
-            <h3>Orthodontics</h3>
-            <p>Traditional braces and clear aligners for straighter teeth.</p>
+            <h3>Why Choose Us?</h3>
+            <ul className="features-list">
+              <li>
+                <span className="feature-icon">🦷</span>
+                <span className="feature-text">
+                  Compassionate, patient-centered care
+                </span>
+              </li>
+              <li>
+                <span className="feature-icon">🌟</span>
+                <span className="feature-text">
+                  Modern technology and gentle techniques
+                </span>
+              </li>
+              <li>
+                <span className="feature-icon">👨‍👩‍👧‍👦</span>
+                <span className="feature-text">Family-friendly atmosphere</span>
+              </li>
+              <li>
+                <span className="feature-icon">📍</span>
+                <span className="feature-text">
+                  Convenient location and flexible scheduling
+                </span>
+              </li>
+            </ul>
+            <a href="#team" className="primary-button">
+              <span className="button-icon">📅</span>
+              Meet Our Team
+            </a>
           </div>
         </div>
       </section>
@@ -183,102 +166,144 @@ function App() {
         </div>
       </section>
 
+      {/* Services Section */}
+      <section id="services" className="services">
+        <div className="max-width-container">
+          <h2 className="section-title">Our Services</h2>
+          <div className="services-grid">
+            <div className="service-card general-service">
+              <div className="service-icon">🦷</div>
+              <h3>General Dentistry</h3>
+              <p>
+                Comprehensive check-ups, cleanings, and preventative care for
+                all ages.
+              </p>
+            </div>
+            <div className="service-card cosmetic-service">
+              <div className="service-icon">✨</div>
+              <h3>Cosmetic Dentistry</h3>
+              <p>
+                Teeth whitening, veneers, and smile makeovers to enhance your
+                smile.
+              </p>
+            </div>
+            <div className="service-card crown-service">
+              <div className="service-icon">👑</div>
+              <h3>Crown Placement</h3>
+              <p>
+                Restore damaged teeth with custom-made crowns for strength and
+                aesthetics.
+              </p>
+            </div>
+            <div className="service-card">
+              <div className="service-icon">😁</div>
+              <h3>Orthodontics</h3>
+              <p>Traditional braces and clear aligners for straighter teeth.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Testimonials Section */}
       <section id="testimonials" className="testimonials">
-        <h2 className="section-title">What Our Patients Say</h2>
-        <div className="testimonial-grid">
-          <div className="testimonial-card">
-            <div className="stars">★★★★★</div>
-            <p>
-              "The best dental experience I've ever had. Dr. Johnson and her
-              team made me feel comfortable and at ease."
-            </p>
-            <h4>- James Wilson</h4>
-          </div>
-          <div className="testimonial-card">
-            <div className="stars">★★★★★</div>
-            <p>
-              "My entire family comes to Bright Smile Dental. They're amazing
-              with kids and provide excellent care for everyone."
-            </p>
-            <h4>- Maria Garcia</h4>
-          </div>
-          <div className="testimonial-card">
-            <div className="stars">★★★★★</div>
-            <p>
-              "I was terrified of dental work until I found this practice. Now I
-              actually look forward to my appointments!"
-            </p>
-            <h4>- Robert Taylor</h4>
+        <div className="max-width-container">
+          <h2 className="section-title">What Our Patients Say</h2>
+          <div className="testimonial-grid">
+            <div className="testimonial-card">
+              <div className="stars">★★★★★</div>
+              <p>
+                "The best dental experience I've ever had. Dr. Johnson and her
+                team made me feel comfortable and at ease."
+              </p>
+              <h4>- James Wilson</h4>
+            </div>
+            <div className="testimonial-card">
+              <div className="stars">★★★★★</div>
+              <p>
+                "My entire family comes to Bright Smile Dental. They're amazing
+                with kids and provide excellent care for everyone."
+              </p>
+              <h4>- Maria Garcia</h4>
+            </div>
+            <div className="testimonial-card">
+              <div className="stars">★★★★★</div>
+              <p>
+                "I was terrified of dental work until I found this practice. Now
+                I actually look forward to my appointments!"
+              </p>
+              <h4>- Robert Taylor</h4>
+            </div>
           </div>
         </div>
       </section>
 
       {/* Contact Section */}
       <section id="contact" className="contact">
-        <div className="contact-info">
-          <h2 className="section-title">Contact Us</h2>
-          <div className="info-item">
-            <strong>Address:</strong> 5206 Irvington Blvd, Houston, TX 77009
+        <div className="max-width-container">
+          <div className="contact-info">
+            <h2 className="section-title">Contact Us</h2>
+            <div className="info-item">
+              <strong>Address:</strong> 5206 Irvington Blvd, Houston, TX 77009
+            </div>
+            <div className="info-item">
+              <strong>Phone:</strong> (555) 123-4567
+            </div>
+            <div className="info-item">
+              <strong>Email:</strong> info@emmalopezdds.com
+            </div>
+            <div className="info-item">
+              <strong>Hours:</strong>
+              <p>Monday-Friday: 8am-6pm</p>
+              <p>Saturday: 9am-2pm</p>
+              <p>Sunday: Closed</p>
+            </div>
           </div>
-          <div className="info-item">
-            <strong>Phone:</strong> (555) 123-4567
+          <div className="contact-form">
+            <h3>Book an Appointment</h3>
+            <form>
+              <div className="form-group">
+                <input type="text" placeholder="Full Name" required />
+              </div>
+              <div className="form-group">
+                <input type="email" placeholder="Email Address" required />
+              </div>
+              <div className="form-group">
+                <input type="tel" placeholder="Phone Number" required />
+              </div>
+              <div className="form-group">
+                <select required>
+                  <option value="" disabled selected>
+                    Select Service
+                  </option>
+                  <option value="general">General Dentistry</option>
+                  <option value="cosmetic">Cosmetic Dentistry</option>
+                  <option value="restorative">Restorative Care</option>
+                  <option value="orthodontics">Orthodontics</option>
+                </select>
+              </div>
+              <div className="form-group">
+                <textarea
+                  placeholder="Additional Information"
+                  rows="4"
+                ></textarea>
+              </div>
+              <button type="submit" className="primary-button">
+                Request Appointment
+              </button>
+            </form>
           </div>
-          <div className="info-item">
-            <strong>Email:</strong> info@emmalopezdds.com
+          <div className="map-container">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6923.938894412026!2d-95.36329902455954!3d29.807427029761932!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8640b8e53187f24b%3A0xf6a57095a9c45ac!2s5206%20Irvington%20Blvd%2C%20Houston%2C%20TX%2077009!5e0!3m2!1sen!2sus!4v1743613597007!5m2!1sen!2sus"
+              width="100%"
+              height="450"
+              style={{ border: 0 }}
+              allowFullScreen=""
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              title="Office Location"
+            ></iframe>
           </div>
-          <div className="info-item">
-            <strong>Hours:</strong>
-            <p>Monday-Friday: 8am-6pm</p>
-            <p>Saturday: 9am-2pm</p>
-            <p>Sunday: Closed</p>
-          </div>
-        </div>
-        <div className="contact-form">
-          <h3>Book an Appointment</h3>
-          <form>
-            <div className="form-group">
-              <input type="text" placeholder="Full Name" required />
-            </div>
-            <div className="form-group">
-              <input type="email" placeholder="Email Address" required />
-            </div>
-            <div className="form-group">
-              <input type="tel" placeholder="Phone Number" required />
-            </div>
-            <div className="form-group">
-              <select required>
-                <option value="" disabled selected>
-                  Select Service
-                </option>
-                <option value="general">General Dentistry</option>
-                <option value="cosmetic">Cosmetic Dentistry</option>
-                <option value="restorative">Restorative Care</option>
-                <option value="orthodontics">Orthodontics</option>
-              </select>
-            </div>
-            <div className="form-group">
-              <textarea
-                placeholder="Additional Information"
-                rows="4"
-              ></textarea>
-            </div>
-            <button type="submit" className="primary-button">
-              Request Appointment
-            </button>
-          </form>
-        </div>
-        <div className="map-container">
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6923.938894412026!2d-95.36329902455954!3d29.807427029761932!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8640b8e53187f24b%3A0xf6a57095a9c45ac!2s5206%20Irvington%20Blvd%2C%20Houston%2C%20TX%2077009!5e0!3m2!1sen!2sus!4v1743613597007!5m2!1sen!2sus"
-            width="100%"
-            height="450"
-            style={{ border: 0 }}
-            allowFullScreen=""
-            loading="lazy"
-            referrerPolicy="no-referrer-when-downgrade"
-            title="Office Location"
-          ></iframe>
         </div>
       </section>
 
