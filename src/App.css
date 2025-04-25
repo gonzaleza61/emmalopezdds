@@ -573,6 +573,11 @@ nav ul li:last-child {
   margin-bottom: 40px;
   font-weight: 300;
   line-height: 1.2;
+  position: relative;
+}
+
+.intro-about-content h2::after {
+  display: none;
 }
 
 .intro-about-content h3 {
@@ -581,6 +586,11 @@ nav ul li:last-child {
   margin: 60px 0 30px;
   font-weight: 300;
   line-height: 1.2;
+  position: relative;
+}
+
+.intro-about-content h3::after {
+  display: none;
 }
 
 .intro-about-content p {
@@ -607,31 +617,23 @@ nav ul li:last-child {
 .features-list li {
   display: flex;
   align-items: center;
-  gap: 15px;
   font-size: 1.2rem;
   color: #3d3d3d;
+  padding: 20px;
+  background-color: white;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  transition: var(--transition);
 }
 
-.feature-icon {
-  font-size: 2rem;
-  line-height: 1;
+.features-list li:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
 }
 
 .feature-text {
   font-weight: 300;
-}
-
-.intro-about-content .primary-button {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  margin-top: 20px;
-  font-size: 1.2rem;
-  padding: 15px 30px;
-}
-
-.button-icon {
-  font-size: 1.4rem;
+  line-height: 1.6;
 }
 
 /* Media queries for tablet responsiveness */
@@ -661,6 +663,7 @@ nav ul li:last-child {
 
   .features-list li {
     font-size: 1.1rem;
+    padding: 15px;
   }
 }
 
@@ -691,6 +694,7 @@ nav ul li:last-child {
 
   .features-list li {
     font-size: 1rem;
+    padding: 12px;
   }
 }
 

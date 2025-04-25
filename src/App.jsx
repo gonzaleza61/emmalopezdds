@@ -103,32 +103,24 @@ function App() {
             <h3>Why Choose Us?</h3>
             <ul className="features-list">
               <li>
-                <span className="feature-icon">🦷</span>
                 <span className="feature-text">
                   Compassionate, patient-centered care
                 </span>
               </li>
               <li>
-                <span className="feature-icon">🌟</span>
                 <span className="feature-text">
                   Modern technology and gentle techniques
                 </span>
               </li>
               <li>
-                <span className="feature-icon">👨‍👩‍👧‍👦</span>
                 <span className="feature-text">Family-friendly atmosphere</span>
               </li>
               <li>
-                <span className="feature-icon">📍</span>
                 <span className="feature-text">
                   Convenient location and flexible scheduling
                 </span>
               </li>
             </ul>
-            <a href="#team" className="primary-button">
-              <span className="button-icon">📅</span>
-              Meet Our Team
-            </a>
           </div>
         </div>
       </section>
