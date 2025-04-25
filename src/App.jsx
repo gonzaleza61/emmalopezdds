@@ -133,39 +133,6 @@ function App() {
         </div>
       </section>
 
-      {/* About Us Section */}
-      <section id="about" className="about">
-        <div className="about-content">
-          <h2 className="section-title">About Bright Smile Dental</h2>
-          <p>
-            With over 15 years of experience, our team of dental professionals
-            is committed to providing the highest quality care in a warm,
-            welcoming environment.
-          </p>
-          <p>
-            We combine the latest technology with compassionate service to
-            ensure your dental experience is comfortable and effective.
-          </p>
-        </div>
-        <div className="team-grid">
-          <div className="team-member">
-            <div className="member-photo"></div>
-            <h3>Dr. Sarah Johnson</h3>
-            <p>Lead Dentist</p>
-          </div>
-          <div className="team-member">
-            <div className="member-photo"></div>
-            <h3>Dr. Michael Chen</h3>
-            <p>Orthodontist</p>
-          </div>
-          <div className="team-member">
-            <div className="member-photo"></div>
-            <h3>Dr. Lisa Rodriguez</h3>
-            <p>Cosmetic Specialist</p>
-          </div>
-        </div>
-      </section>
-
       {/* Services Section */}
       <section id="services" className="services">
         <div className="max-width-container">
@@ -257,40 +224,6 @@ function App() {
               <p>Saturday: 9am-2pm</p>
               <p>Sunday: Closed</p>
             </div>
-          </div>
-          <div className="contact-form">
-            <h3>Book an Appointment</h3>
-            <form>
-              <div className="form-group">
-                <input type="text" placeholder="Full Name" required />
-              </div>
-              <div className="form-group">
-                <input type="email" placeholder="Email Address" required />
-              </div>
-              <div className="form-group">
-                <input type="tel" placeholder="Phone Number" required />
-              </div>
-              <div className="form-group">
-                <select required>
-                  <option value="" disabled selected>
-                    Select Service
-                  </option>
-                  <option value="general">General Dentistry</option>
-                  <option value="cosmetic">Cosmetic Dentistry</option>
-                  <option value="restorative">Restorative Care</option>
-                  <option value="orthodontics">Orthodontics</option>
-                </select>
-              </div>
-              <div className="form-group">
-                <textarea
-                  placeholder="Additional Information"
-                  rows="4"
-                ></textarea>
-              </div>
-              <button type="submit" className="primary-button">
-                Request Appointment
-              </button>
-            </form>
           </div>
           <div className="map-container">
             <iframe
