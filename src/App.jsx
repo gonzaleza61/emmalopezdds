@@ -73,7 +73,7 @@ function App() {
                 <a href="#contact" className="cta-button">
                   <span>Book Appointment</span>
                 </a>
-                <a href="#services" className="secondary-button">
+                <a href="#about" className="secondary-button">
                   Learn More
                 </a>
               </div>
