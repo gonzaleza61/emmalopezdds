@@ -430,6 +430,7 @@ nav ul li:last-child {
   align-items: center;
   justify-content: flex-start;
   flex-wrap: wrap;
+  width: 100%;
 }
 
 /* Services Section with white background */
@@ -1147,12 +1148,21 @@ footer {
 
 /* Style the secondary button in hero section */
 .hero .secondary-button {
-  background-color: rgba(255, 255, 255, 0.15);
+  background-color: transparent;
   color: white;
+  padding: 12px 30px;
   border: 2px solid white;
-  font-weight: 600;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: var(--border-radius);
+  font-size: 1rem;
+  cursor: pointer;
+  transition: var(--transition);
+  text-decoration: none;
+  display: inline-block;
+  margin: 0;
+  font-weight: 300;
+  flex: 1;
+  text-align: center;
+  min-width: 200px;
 }
 
 .hero .secondary-button:hover {
@@ -1164,13 +1174,18 @@ footer {
 
 /* Update mobile styles */
 @media (max-width: 768px) {
-  .hero-buttons .primary-button {
-    padding: 14px 28px;
-    font-size: 1.1rem;
+  .hero-buttons {
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
   }
 
-  .cta-button {
-    padding: 8px 16px;
+  .hero .cta-button,
+  .hero .secondary-button {
+    width: 100%;
+    min-width: 100%;
+    padding: 12px 20px;
+    font-size: 1rem;
   }
 }
 
@@ -1211,12 +1226,15 @@ footer {
   transition: var(--transition);
   text-decoration: none;
   display: inline-block;
-  margin: 0 10px;
+  margin: 0;
   font-weight: 300;
   font-family: "Poppins", sans-serif;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   position: relative;
   z-index: 1;
+  flex: 1;
+  text-align: center;
+  min-width: 200px;
 }
 
 .hero .cta-button::before {
@@ -1254,6 +1272,16 @@ footer {
   .contact {
     padding: 40px 0;
   }
+
+  .hero-buttons {
+    gap: 15px;
+  }
+
+  .hero .cta-button,
+  .hero .secondary-button {
+    padding: 12px 20px;
+    font-size: 1rem;
+  }
 }
 
 @media (max-width: 768px) {
@@ -1261,5 +1289,19 @@ footer {
   .testimonials,
   .contact {
     padding: 30px 0;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+  }
+
+  .hero .cta-button,
+  .hero .secondary-button {
+    width: 100%;
+    min-width: 100%;
+    padding: 12px 20px;
+    font-size: 1rem;
   }
 }
