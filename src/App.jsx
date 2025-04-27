@@ -1,8 +1,33 @@
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import "./App.css";
+import gsap from "gsap";
 
 function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const heroContentRef = useRef(null);
+
+  useEffect(() => {
+    // Hero content animation
+    const heroContent = heroContentRef.current;
+    if (heroContent) {
+      const elements = heroContent.querySelectorAll("h2, p, .hero-buttons");
+
+      gsap.fromTo(
+        elements,
+        {
+          y: 30,
+          opacity: 0,
+        },
+        {
+          y: 0,
+          opacity: 1,
+          duration: 0.8,
+          stagger: 0.2,
+          ease: "power3.out",
+        }
+      );
+    }
+  }, []);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -61,7 +86,7 @@ function App() {
               className="hero-logo-image"
             />
           </div>
-          <div className="hero-content">
+          <div className="hero-content" ref={heroContentRef}>
             <div className="max-width-container">
               <h2>A Healthier, Brighter Smile Awaits</h2>
               <p>
@@ -83,7 +108,7 @@ function App() {
       </section>
 
       {/* New About Us Section */}
-      <section className="intro-about">
+      <section id="about" className="intro-about">
         <div className="max-width-container">
           <div className="intro-about-content">
             <div className="about-grid">
@@ -248,12 +273,16 @@ function App() {
           <div className="footer-logo">
             <h2>
               <img
-                src="/emmalogotr.svg"
+                src="/emmalogolandscapetr.svg"
                 alt="Emma Lopez DDS"
                 className="logo-image"
               />
             </h2>
-            <p>Your partner in dental health</p>
+            <div className="footer-contact">
+              <p>5206 Irvington Blvd, Houston, TX 77009</p>
+              <p>(555) 123-4567</p>
+              <p>info@emmalopezdds.com</p>
+            </div>
           </div>
           <div className="footer-links">
             <h3>Quick Links</h3>
@@ -275,26 +304,9 @@ function App() {
               </li>
             </ul>
           </div>
-          <div className="footer-social">
-            <h3>Connect With Us</h3>
-            <div className="social-icons">
-              <a href="#" aria-label="Facebook">
-                FB
-              </a>
-              <a href="#" aria-label="Instagram">
-                IG
-              </a>
-              <a href="#" aria-label="Twitter">
-                TW
-              </a>
-              <a href="#" aria-label="LinkedIn">
-                LI
-              </a>
-            </div>
-          </div>
         </div>
         <div className="footer-bottom">
-          <p>&copy; 2023 Bright Smile Dental. All rights reserved.</p>
+          <p>&copy; 2024 Emma Lopez DDS. All rights reserved.</p>
         </div>
       </footer>
     </div>
