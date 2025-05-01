@@ -117,8 +117,8 @@ section {
   text-align: left;
   margin-bottom: 50px;
   font-size: 3rem;
-  color: var(--secondary-color);
-  padding-left: 0;
+  color: #40a7ff;
+  padding: 0;
 }
 
 /* Buttons */
@@ -435,7 +435,7 @@ nav ul li:last-child {
 
 /* Services Section with white background */
 .services {
-  background-color: white;
+  background-color: #f8f9fa;
   margin: 0;
   padding: 60px 0 80px;
   max-width: 100%;
@@ -443,7 +443,14 @@ nav ul li:last-child {
   box-shadow: none;
 }
 
-/* Service cards with improved styling and more visible backgrounds */
+.services .max-width-container {
+  width: 100%;
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Service cards with improved styling */
 .service-card {
   background-color: white;
   padding: 50px 40px;
@@ -464,74 +471,47 @@ nav ul li:last-child {
   display: none;
 }
 
-/* Crown service card with much more visible background */
+/* Remove background images and update colors */
 .crown-service {
-  background: linear-gradient(
-      rgba(255, 255, 255, 0.5),
-      rgba(255, 255, 255, 0.5)
-    ),
-    url("/crownabstract.png") no-repeat center center;
-  background-size: contain;
+  background: white;
   border: 1px solid rgba(74, 144, 226, 0.2);
 }
 
 .crown-service:hover {
-  background: linear-gradient(
-      rgba(255, 255, 255, 0.4),
-      rgba(255, 255, 255, 0.4)
-    ),
-    url("/crownabstract.png") no-repeat center center;
-  background-size: contain;
+  background: white;
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
 }
 
-/* Cosmetic service card with much more visible background */
 .cosmetic-service {
-  background: linear-gradient(
-      rgba(255, 255, 255, 0.5),
-      rgba(255, 255, 255, 0.5)
-    ),
-    url("/cosmeticdentistry.png") no-repeat center center;
-  background-size: contain;
+  background: white;
   border: 1px solid rgba(74, 144, 226, 0.2);
 }
 
 .cosmetic-service:hover {
-  background: linear-gradient(
-      rgba(255, 255, 255, 0.4),
-      rgba(255, 255, 255, 0.4)
-    ),
-    url("/cosmeticdentistry.png") no-repeat center center;
-  background-size: contain;
+  background: white;
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
 }
 
-/* General dentistry service card with much more visible background */
 .general-service {
-  background: linear-gradient(
-      rgba(255, 255, 255, 0.5),
-      rgba(255, 255, 255, 0.5)
-    ),
-    url("/gendentistry.png") no-repeat center center;
-  background-size: contain;
+  background: white;
   border: 1px solid rgba(74, 144, 226, 0.2);
 }
 
 .general-service:hover {
-  background: linear-gradient(
-      rgba(255, 255, 255, 0.4),
-      rgba(255, 255, 255, 0.4)
-    ),
-    url("/gendentistry.png") no-repeat center center;
-  background-size: contain;
+  background: white;
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
 }
 
-/* Improve service card text visibility with stronger contrast */
+/* Improve service card text visibility */
 .service-card h3 {
   font-size: 1.8rem;
   margin-bottom: 20px;
-  color: var(--primary-color);
+  color: #40a7ff;
   position: relative;
   z-index: 2;
-  text-shadow: 0 0 5px rgba(255, 255, 255, 0.8);
   font-weight: 700;
 }
 
@@ -539,60 +519,51 @@ nav ul li:last-child {
   font-size: 1.2rem;
   position: relative;
   z-index: 2;
-  text-shadow: 0 0 4px rgba(255, 255, 255, 0.8);
+  color: #3d3d3d;
   font-weight: 500;
 }
 
 /* Update the services grid for better spacing */
 .services-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 30px;
   margin: 0;
   padding: 0;
+  max-width: 1300px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .service-card:hover {
   transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
 }
 
 /* New About Us Section */
 .intro-about {
   padding: 100px 0;
   background-color: #f8f9fa;
+  width: 100%;
 }
 
 .intro-about-content {
+  width: 100%;
   max-width: 1300px;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0;
 }
 
 .about-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 60px;
+  grid-template-columns: 1fr;
+  gap: 40px;
   align-items: center;
+  width: 100%;
 }
 
 .about-text {
-  max-width: 600px;
-}
-
-.about-image {
   width: 100%;
-  height: 100%;
-  position: relative;
-  border-radius: var(--border-radius);
-  overflow: hidden;
-  box-shadow: var(--box-shadow);
-}
-
-.about-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
 }
 
 .intro-about-content h2 {
@@ -602,6 +573,7 @@ nav ul li:last-child {
   font-weight: 300;
   line-height: 1.2;
   position: relative;
+  text-align: left;
 }
 
 .intro-about-content h3 {
@@ -611,6 +583,7 @@ nav ul li:last-child {
   font-weight: 300;
   line-height: 1.2;
   position: relative;
+  text-align: left;
 }
 
 .intro-about-content p {
@@ -618,19 +591,17 @@ nav ul li:last-child {
   line-height: 1.8;
   color: #3d3d3d;
   margin-bottom: 30px;
-}
-
-.intro-about-content p:last-child {
-  margin-bottom: 0;
+  text-align: left;
 }
 
 .features-list {
   list-style: none;
   padding: 0;
-  margin: 0 0 40px;
+  margin: 40px 0;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(2, 1fr);
   gap: 30px;
+  width: 100%;
 }
 
 .features-list li {
@@ -660,32 +631,18 @@ nav ul li:last-child {
   .intro-about {
     padding: 60px 20px;
   }
-  .about-grid {
-    grid-template-columns: 1fr;
-    gap: 40px;
-  }
-  .about-text {
-    order: 1;
-    max-width: 100%;
-  }
-  .about-image {
-    display: none;
-  }
   .intro-about-content h2 {
     font-size: 2.5rem;
-    max-width: 100%;
   }
   .intro-about-content h3 {
     font-size: 1.8rem;
-    max-width: 100%;
   }
   .intro-about-content p {
     font-size: 1rem;
-    max-width: 100%;
   }
   .features-list {
-    margin-top: 30px;
     grid-template-columns: 1fr;
+    margin-top: 30px;
   }
   .features-list li {
     padding: 15px;
@@ -696,31 +653,22 @@ nav ul li:last-child {
   .intro-about {
     padding: 60px 0;
   }
-
-  .about-image {
-    height: 300px;
-  }
-
   .intro-about-content h2 {
     font-size: 2.5rem;
     margin-bottom: 25px;
   }
-
   .intro-about-content h3 {
     font-size: 2rem;
     margin: 30px 0 20px;
   }
-
   .intro-about-content p {
     font-size: 1.1rem;
     margin-bottom: 20px;
   }
-
   .features-list {
     grid-template-columns: 1fr;
     gap: 15px;
   }
-
   .features-list li {
     font-size: 1rem;
     padding: 12px;

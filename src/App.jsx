@@ -7,6 +7,7 @@ function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const heroContentRef = useRef(null);
   const aboutSectionRef = useRef(null);
+  const servicesSectionRef = useRef(null);
 
   useEffect(() => {
     // Register ScrollTrigger plugin
@@ -54,6 +55,58 @@ function App() {
           ease: "power3.out",
           scrollTrigger: {
             trigger: aboutSection,
+            start: "top 70%",
+            end: "bottom 20%",
+            toggleActions: "play none none reverse",
+          },
+        }
+      );
+    }
+
+    // Services section animation
+    const servicesSection = servicesSectionRef.current;
+    if (servicesSection) {
+      const title = servicesSection.querySelector(".section-title");
+      const cards = servicesSection.querySelectorAll(".service-card");
+
+      // Animate the title
+      gsap.fromTo(
+        title,
+        {
+          y: 30,
+          opacity: 0,
+        },
+        {
+          y: 0,
+          opacity: 1,
+          duration: 0.8,
+          ease: "power3.out",
+          scrollTrigger: {
+            trigger: servicesSection,
+            start: "top 70%",
+            end: "bottom 20%",
+            toggleActions: "play none none reverse",
+          },
+        }
+      );
+
+      // Animate the cards with a staggered effect
+      gsap.fromTo(
+        cards,
+        {
+          y: 50,
+          opacity: 0,
+          scale: 0.95,
+        },
+        {
+          y: 0,
+          opacity: 1,
+          scale: 1,
+          duration: 0.8,
+          stagger: 0.15,
+          ease: "power3.out",
+          scrollTrigger: {
+            trigger: servicesSection,
             start: "top 70%",
             end: "bottom 20%",
             toggleActions: "play none none reverse",
@@ -186,16 +239,13 @@ function App() {
                   </li>
                 </ul>
               </div>
-              <div className="about-image">
-                <img src="/portraithero.jpg" alt="Our dental practice" />
-              </div>
             </div>
           </div>
         </div>
       </section>
 
       {/* Services Section */}
-      <section id="services" className="services">
+      <section id="services" className="services" ref={servicesSectionRef}>
         <div className="max-width-container">
           <h2 className="section-title">Our Services</h2>
           <div className="services-grid">
