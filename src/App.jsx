@@ -1,12 +1,17 @@
 import { useState, useEffect, useRef } from "react";
 import "./App.css";
 import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const heroContentRef = useRef(null);
+  const aboutSectionRef = useRef(null);
 
   useEffect(() => {
+    // Register ScrollTrigger plugin
+    gsap.registerPlugin(ScrollTrigger);
+
     // Hero content animation
     const heroContent = heroContentRef.current;
     if (heroContent) {
@@ -24,6 +29,35 @@ function App() {
           duration: 0.8,
           stagger: 0.2,
           ease: "power3.out",
+        }
+      );
+    }
+
+    // About section animation
+    const aboutSection = aboutSectionRef.current;
+    if (aboutSection) {
+      const aboutElements = aboutSection.querySelectorAll(
+        ".about-text h2, .about-text p, .features-list li, .about-image"
+      );
+
+      gsap.fromTo(
+        aboutElements,
+        {
+          y: 40,
+          opacity: 0,
+        },
+        {
+          y: 0,
+          opacity: 1,
+          duration: 1,
+          stagger: 0.15,
+          ease: "power3.out",
+          scrollTrigger: {
+            trigger: aboutSection,
+            start: "top 70%",
+            end: "bottom 20%",
+            toggleActions: "play none none reverse",
+          },
         }
       );
     }
@@ -107,8 +141,8 @@ function App() {
         </div>
       </section>
 
-      {/* New About Us Section */}
-      <section id="about" className="intro-about">
+      {/* About Us Section */}
+      <section id="about" className="intro-about" ref={aboutSectionRef}>
         <div className="max-width-container">
           <div className="intro-about-content">
             <div className="about-grid">
