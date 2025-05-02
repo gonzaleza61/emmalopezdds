@@ -7,23 +7,26 @@ const Testimonials = () => {
           <div className="testimonial-card">
             <div className="stars">★★★★★</div>
             <p>
-              "The best dental experience I've ever had. Dr. Johnson and her
-              team made me feel comfortable and at ease."
+              "Dr. Lopez and her team are exceptional. They made me feel
+              comfortable and at ease during my entire visit. The attention to
+              detail and personalized care is outstanding."
             </p>
             <h4>- James Wilson</h4>
           </div>
           <div className="testimonial-card">
             <div className="stars">★★★★★</div>
             <p>
-              "My entire family comes to Bright Smile Dental. They're amazing
-              with kids and provide excellent care for everyone."
+              "Our entire family trusts Dr. Lopez with our dental care. She's
+              amazing with children and provides excellent care for everyone.
+              The office is always welcoming and professional."
             </p>
             <h4>- Maria Garcia</h4>
           </div>
           <div className="testimonial-card">
             <div className="stars">★★★★★</div>
             <p>
-              "I was terrified of dental work until I found this practice. Now I
+              "I used to be anxious about dental visits, but Dr. Lopez's gentle
+              approach and caring demeanor have completely changed that. Now I
               actually look forward to my appointments!"
             </p>
             <h4>- Robert Taylor</h4>
