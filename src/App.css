@@ -457,13 +457,20 @@ nav ul li:last-child {
   border-radius: var(--border-radius);
   box-shadow: var(--box-shadow);
   text-align: left;
-  transition: var(--transition);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   border: 1px solid rgba(0, 0, 0, 0.05);
   position: relative;
   min-height: 280px;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.service-card.animate {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 /* Hide service icons (emojis) */
@@ -526,7 +533,7 @@ nav ul li:last-child {
 /* Update the services grid for better spacing */
 .services-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(4, 1fr);
   gap: 30px;
   margin: 0;
   padding: 0;
@@ -1280,5 +1287,29 @@ footer {
     min-width: 100%;
     padding: 12px 20px;
     font-size: 1rem;
+  }
+}
+
+@media (max-width: 991px) {
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .service-card {
+    padding: 30px 25px;
+    min-height: 240px;
+  }
+}
+
+@media (max-width: 768px) {
+  .services-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .service-card {
+    padding: 25px 20px;
+    min-height: 220px;
   }
 }

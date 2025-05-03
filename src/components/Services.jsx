@@ -1,98 +1,95 @@
-import { useRef, useEffect } from "react";
+import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
+gsap.registerPlugin(ScrollTrigger);
+
 const Services = () => {
-  const servicesSectionRef = useRef(null);
+  const servicesRef = useRef(null);
+  const cardsRef = useRef([]);
+  const gridRef = useRef(null);
 
   useEffect(() => {
-    gsap.registerPlugin(ScrollTrigger);
+    const cards = cardsRef.current;
+    const grid = gridRef.current;
 
-    const servicesSection = servicesSectionRef.current;
-    if (servicesSection) {
-      const title = servicesSection.querySelector(".section-title");
-      const cards = servicesSection.querySelectorAll(".service-card");
-
-      // Animate the title
-      gsap.fromTo(
-        title,
-        {
-          y: 30,
-          opacity: 0,
+    // Initial animation for cards
+    cards.forEach((card, index) => {
+      gsap.to(card, {
+        scrollTrigger: {
+          trigger: card,
+          start: "top bottom-=100",
+          toggleActions: "play none none reverse",
         },
-        {
-          y: 0,
-          opacity: 1,
-          duration: 0.8,
-          ease: "power3.out",
-          scrollTrigger: {
-            trigger: servicesSection,
-            start: "top 70%",
-            end: "bottom 20%",
-            toggleActions: "play none none reverse",
-          },
-        }
-      );
+        opacity: 1,
+        y: 0,
+        duration: 0.8,
+        delay: index * 0.2,
+        ease: "power3.out",
+      });
+    });
 
-      // Animate the cards with a staggered effect
-      gsap.fromTo(
-        cards,
-        {
-          y: 50,
-          opacity: 0,
-          scale: 0.95,
-        },
-        {
-          y: 0,
-          opacity: 1,
-          scale: 1,
-          duration: 0.8,
-          stagger: 0.15,
-          ease: "power3.out",
-          scrollTrigger: {
-            trigger: servicesSection,
-            start: "top 70%",
-            end: "bottom 20%",
-            toggleActions: "play none none reverse",
-          },
-        }
-      );
-    }
+    // Grid rearrangement animation
+    ScrollTrigger.create({
+      trigger: servicesRef.current,
+      start: "top 20%",
+      onEnter: () => {
+        grid.classList.add("rearrange");
+      },
+      onLeaveBack: () => {
+        grid.classList.remove("rearrange");
+      },
+    });
+
+    return () => {
+      ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
+    };
   }, []);
 
   return (
-    <section id="services" className="services" ref={servicesSectionRef}>
+    <section id="services" className="services" ref={servicesRef}>
       <div className="max-width-container">
         <h2 className="section-title">Our Services</h2>
-        <div className="services-grid">
-          <div className="service-card general-service">
-            <div className="service-icon">🦷</div>
+        <div className="services-grid" ref={gridRef}>
+          <div
+            className="service-card"
+            ref={(el) => (cardsRef.current[0] = el)}
+          >
             <h3>General Dentistry</h3>
             <p>
-              Comprehensive check-ups, cleanings, and preventative care for all
-              ages.
+              Comprehensive dental care including cleanings, fillings, and
+              preventive treatments to maintain your oral health.
             </p>
           </div>
-          <div className="service-card cosmetic-service">
-            <div className="service-icon">✨</div>
+          <div
+            className="service-card"
+            ref={(el) => (cardsRef.current[1] = el)}
+          >
             <h3>Cosmetic Dentistry</h3>
             <p>
-              Teeth whitening, veneers, and smile makeovers to enhance your
-              smile.
+              Transform your smile with our cosmetic procedures including
+              whitening, veneers, and smile makeovers.
             </p>
           </div>
-          <div className="service-card crown-service">
-            <div className="service-icon">👑</div>
-            <h3>Crown Placement</h3>
+          <div
+            className="service-card"
+            ref={(el) => (cardsRef.current[2] = el)}
+          >
+            <h3>Restorative Dentistry</h3>
             <p>
-              Restore damaged teeth with custom-made crowns for strength and
-              aesthetics.
+              Advanced solutions for damaged or missing teeth, including crowns,
+              bridges, and dental implants.
             </p>
           </div>
-          <div className="service-card">
-            <div className="service-icon">😁</div>
-            <h3>Orthodontics</h3>
-            <p>Traditional braces and clear aligners for straighter teeth.</p>
+          <div
+            className="service-card"
+            ref={(el) => (cardsRef.current[3] = el)}
+          >
+            <h3>Emergency Care</h3>
+            <p>
+              Prompt attention for dental emergencies, ensuring you receive
+              immediate care when you need it most.
+            </p>
           </div>
         </div>
       </div>
