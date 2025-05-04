@@ -7,38 +7,39 @@ gsap.registerPlugin(ScrollTrigger);
 const Services = () => {
   const servicesRef = useRef(null);
   const cardsRef = useRef([]);
-  const gridRef = useRef(null);
 
   useEffect(() => {
     const cards = cardsRef.current;
-    const grid = gridRef.current;
 
-    // Initial animation for cards
-    cards.forEach((card, index) => {
-      gsap.to(card, {
-        scrollTrigger: {
-          trigger: card,
-          start: "top bottom-=100",
-          toggleActions: "play none none reverse",
-        },
-        opacity: 1,
-        y: 0,
-        duration: 0.8,
-        delay: index * 0.2,
-        ease: "power3.out",
-      });
+    // Create a timeline for smoother animations
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: servicesRef.current,
+        start: "top 70%",
+        end: "bottom 20%",
+        toggleActions: "play none none reverse",
+      },
     });
 
-    // Grid rearrangement animation
-    ScrollTrigger.create({
-      trigger: servicesRef.current,
-      start: "top 20%",
-      onEnter: () => {
-        grid.classList.add("rearrange");
-      },
-      onLeaveBack: () => {
-        grid.classList.remove("rearrange");
-      },
+    // Add cards to timeline with smoother stagger
+    cards.forEach((card, index) => {
+      tl.fromTo(
+        card,
+        {
+          opacity: 0,
+          y: 30,
+          scale: 0.95,
+        },
+        {
+          opacity: 1,
+          y: 0,
+          scale: 1,
+          duration: 0.6,
+          ease: "power2.out",
+          delay: index * 0.1,
+        },
+        index * 0.1
+      );
     });
 
     return () => {
@@ -50,7 +51,7 @@ const Services = () => {
     <section id="services" className="services" ref={servicesRef}>
       <div className="max-width-container">
         <h2 className="section-title">Our Services</h2>
-        <div className="services-grid" ref={gridRef}>
+        <div className="services-grid">
           <div
             className="service-card"
             ref={(el) => (cardsRef.current[0] = el)}
