@@ -435,7 +435,7 @@ nav ul li:last-child {
 
 /* Services Section with white background */
 .services {
-  background-color: #f8f9fa;
+  background-color: white;
   margin: 0;
   padding: 60px 0 80px;
   max-width: 100%;
@@ -693,7 +693,7 @@ nav ul li:last-child {
 
 /* Testimonials Section */
 .testimonials {
-  background-color: white;
+  background-color: #f8f9fa;
   max-width: 100%;
   margin: 0;
   padding: 60px 0;
